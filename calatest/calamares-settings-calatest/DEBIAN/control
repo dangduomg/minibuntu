@@ -1,0 +1,21 @@
+Package: calamares-settings-carl
+Source: calamares-settings-ubuntu
+Version: 1:24.04.39
+Architecture: all
+Maintainer: Lubuntu Developers <lubuntu-devel@lists.ubuntu.com>
+Installed-Size: 2222
+Depends: calamares-settings-ubuntu-common (>= 1:24.04.39)
+Recommends: lubuntu-installer-prompt
+Conflicts: calamares-settings-ubuntu-flavor
+Provides: calamares-settings-ubuntu-flavor
+Section: devel
+Priority: optional
+Homepage: https://code.launchpad.net/~ubuntu-qt-code/+git/calamares-settings-ubuntu
+Description: minibuntu-carl Calamares Settings and Branding
+ A customized version of calamares-settings-lubuntu for minibuntu-carl.
+ Original title: Lubuntu Calamares Settings and Branding
+ Original desc:
+ This package contains the Calamares settings and branding for Lubuntu.
+ As part of the branding the installer slideshow is contained within.
+ The settings ensure a proper Lubuntu desktop is installed with the
+ LXQt desktop environment.

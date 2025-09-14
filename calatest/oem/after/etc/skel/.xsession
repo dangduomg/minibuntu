@@ -1,0 +1,3 @@
+openbox &
+sudo calamares
+poweroff

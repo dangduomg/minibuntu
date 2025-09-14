@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Default Xsession
+Comment=Run Xsession as user
+Exec=/etc/X11/Xsession
+TryExec=/etc/X11/Xsession
+Type=Application

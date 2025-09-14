@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Exec=mousepad Desktop/readme.txt

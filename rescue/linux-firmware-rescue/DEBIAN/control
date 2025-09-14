@@ -1,0 +1,16 @@
+Package: linux-firmware-rescue
+Version: 20240318.git3b128b60-0ubuntu2
+Architecture: amd64
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Installed-Size: 98096
+Recommends: firmware-sof-signed
+Conflicts: atmel-firmware
+Breaks: amd64-microcode (<= 3.20220411.1ubuntu1), initramfs-tools (<< 0.142ubuntu8~), linux-firmware-raspi2 (<= 1.20190819-0ubuntu2), linux-firmware-snapdragon (<= 1.2-0ubuntu1)
+Replaces: atmel-firmware, linux-firmware-snapdragon (<= 1.2-0ubuntu1), linux-restricted-common
+Provides: atmel-firmware
+Section: misc
+Priority: optional
+Description: Firmware for Linux kernel drivers
+ This package provides firmware used by Linux kernel drivers.
+ Only firmware for minibuntu-rescue is needed
+Original-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>

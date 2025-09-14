@@ -1,0 +1,6 @@
+# these are my private folders
+archived/
+work/
+
+# no isos
+*.iso
