@@ -9,10 +9,10 @@ if [[ ! -d ../root-base ]]; then
     source ../buildroot-base.sh
 fi
 
-if [[ -d root-rescue ]]; then
-    rm -r root-rescue
+if [[ -d root ]]; then
+    rm -r root
 fi
-mkdir root-rescue
+mkdir root
 
 rsync -aHAX --numeric-ids --delete ../root-base/ root/
 
