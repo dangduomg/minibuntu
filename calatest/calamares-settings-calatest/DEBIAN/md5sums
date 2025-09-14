@@ -1,9 +1,0 @@
-6415053849745b48bc9be16e0ea5d431  usr/bin/calamares-launch-normal
-649f6fdd33dd70dc5da918bdc1266dc9  usr/bin/calamares-launch-oem
-dfd7c76abce322f3565b3b7e8978eb77  usr/bin/calamares-logs-helper
-8631467527a9da13d27fecbd7c0715db  usr/libexec/calamares-oemprep.sh
-e7d506e65d58c186fcf9534f76223b13  usr/share/applications/calamares-launch-oem.desktop
-5ea09d57f90dd78fa214275013447e01  usr/share/applications/lubuntu-calamares.desktop
-0fe251e3cd86bbf06668b3e62511d7e7  usr/share/doc/calamares-settings-lubuntu/copyright
-9efe143f43f0d88c8c8b3a3dbbce191e  usr/share/icons/hicolor/scalable/apps/lubuntu-installer.svg
-cac23844964eae4e00ec11b49530b0d4  usr/share/lintian/overrides/calamares-settings-lubuntu
