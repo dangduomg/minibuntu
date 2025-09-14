@@ -11,6 +11,7 @@ Right now contains four spins:
 Compare minibuntu-rescue with SystemRescue:
 - minibuntu-rescue-2025.09.10.18.22.23.iso: 688 MiB
 - systemrescue-12.02-amd64.iso: 1125 MiB
+
 As can be seen, minibuntu-rescue is only about half the size of
 SystemRescue, while still having enough features to be usable.
 
