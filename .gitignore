@@ -2,13 +2,18 @@
 archived/
 work/
 
+# no built roots
+bootstrap.tar.gz
+root-base/
+**/root/
+
 # no large binary images
 *.iso
 *.img
 *.qcow2
 
-# root directories are large obviously
-**/root
+# no locks
+*.lck
 
 # the calamares settings in calatest is temporary; its for testing only
-calatest/calamares-settings
+calatest/calamares-settings/
