@@ -22,7 +22,7 @@ mkdir root-base
 debootstrap --unpack-tarball="$(realpath bootstrap.tar.gz)" \
     noble root-base
     
-rsync -aHAX --numeric-ids oem-base/before/ root-base/
+rsync -aHAX --numeric-ids --chown=root:root oem-base/before/ root-base/
 
 systemd-nspawn -D root-base --machine=base /bin/bash -c "
     echo 'Acquire::http::Proxy \"http://127.0.0.1:3142\";' \
@@ -53,4 +53,4 @@ systemd-nspawn -D root-base --machine=base /bin/bash -c "
     rm /etc/apt/apt.conf.d/01proxy
 "
 
-rsync -aHAX --numeric-ids oem-base/after/ root-base/
+rsync -aHAX --numeric-ids --chown=root:root oem-base/after/ root-base/
