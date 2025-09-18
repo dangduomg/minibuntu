@@ -8,6 +8,7 @@ Besides, these command line utilities are supported:
 - clamav (clamscan -r <dir> to scan, freshclam to update)
 - clonezilla
 - nwipe
+- testdisk
 
 Thanks,
 From baba, 2025
