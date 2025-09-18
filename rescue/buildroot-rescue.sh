@@ -54,6 +54,10 @@ systemd-nspawn -D root --machine=rescue bash -c "
         clonezilla \
         nwipe \
         clamav \
+        testdisk \
+        baobab \
+        gnome-disk-utility \
+        xdemineur \
         -f /pkgs/*
 
     rm -r /pkgs
