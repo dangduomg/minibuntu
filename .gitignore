@@ -17,3 +17,6 @@ root-base/
 
 # the calamares settings in calatest is temporary; its for testing only
 calatest/calamares-settings/
+
+# ad hoc
+rescue/oem/before/pkgs/linux-firmware-rescue.deb
