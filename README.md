@@ -32,4 +32,10 @@ along with these packages:
 - apt-cacher-ng
 
 # How to build
-TODO.
+1. Clone the project and `cd` to the project root
+2. Create the base root first by running
+`sudo ./buildroot-base.sh`
+3. `cd` to the folder of any spin you want, like `rescue`
+4. Run `sudo ./buildroot-<spinname>.sh` in the folder to build the root of
+that spin
+5. Once the root is built, run `../buildiso.sh` to build a ready to use ISO
