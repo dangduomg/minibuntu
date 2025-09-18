@@ -1,4 +1,5 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Exec=mousepad Desktop/readme.txt
+Exec=/usr/bin/mousepad Desktop/readme.txt
+Name=Open readme.txt
