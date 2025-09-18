@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Exec=.config/autostart/set-bg.sh
+Name=Set background
