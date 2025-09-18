@@ -1,0 +1,7 @@
+[Default Applications]
+image/jpeg=viewnior.desktop
+image/png=viewnior.desktop
+
+[Added Associations]
+image/jpeg=viewnior.desktop;
+image/png=viewnior.desktop;
