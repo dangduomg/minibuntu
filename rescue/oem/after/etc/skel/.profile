@@ -27,7 +27,7 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 # set browser
-export BROWSER=/opt/palemoon/palemoon
+export BROWSER=/usr/bin/palemoon
 
 # start X at login
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
