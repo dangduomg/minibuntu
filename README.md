@@ -42,8 +42,12 @@ that spin
 
 # Screenshots
 
-minibuntu-rescue running htop:
+minibuntu-rescue on QEMU running htop (very light!):
 ![](./screenshots/htop.png)
 
-minibuntu-rescue running on real hardware, with almost all GUI apps showcased:
+minibuntu-rescue running on real hardware (Surface Laptop 4), with almost all
+GUI apps and Wi-Fi showcased:
 ![](./screenshots/real%20hardware.png)
+
+minibuntu-carl on QEMU:
+![](./screenshots/carl.png)
