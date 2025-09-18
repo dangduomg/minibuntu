@@ -49,6 +49,7 @@ systemd-nspawn -D root-base --machine=base /bin/bash -c "
         nano
 
     apt-get clean
+    rm -r /var/lib/apt/lists/*
     
     rm /etc/apt/apt.conf.d/01proxy
 "

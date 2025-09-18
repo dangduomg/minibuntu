@@ -59,6 +59,7 @@ systemd-nspawn -D root --machine=rescue bash -c "
     rm -r /pkgs
         
     apt-get clean
+    rm -r /var/lib/apt/lists/*
     
     rm /etc/apt/apt.conf.d/01proxy
 "
