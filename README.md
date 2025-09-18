@@ -39,3 +39,11 @@ along with these packages:
 4. Run `sudo ./buildroot-<spinname>.sh` in the folder to build the root of
 that spin
 5. Once the root is built, run `../buildiso.sh` to build a ready to use ISO
+
+# Screenshots
+
+minibuntu-rescue running htop:
+![](./screenshots/htop.png)
+
+minibuntu-rescue running on real hardware, with almost all GUI apps showcased:
+![](./screenshots/real%20hardware.png)
