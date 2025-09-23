@@ -47,6 +47,7 @@ systemd-nspawn -D root --machine=rescue bash -c "
         gparted \
         hardinfo \
         ghex \
+        epiphany-browser \
         viewnior \
         xpdf \
         xsol \
