@@ -9,7 +9,7 @@ Right now contains four spins:
 
 # What is special about minibuntu
 Compare minibuntu-rescue with SystemRescue:
-- minibuntu-rescue-2025.09.10.18.22.23.iso: 688 MiB
+- minibuntu-rescue-2025.09.19.00.15.26.iso: 666 MiB
 - systemrescue-12.02-amd64.iso: 1125 MiB
 
 As can be seen, minibuntu-rescue is only about half the size of
