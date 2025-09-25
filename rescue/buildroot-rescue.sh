@@ -67,6 +67,8 @@ systemd-nspawn -D root --machine=rescue bash -c "
     rm -r /var/lib/apt/lists/*
     
     rm /etc/apt/apt.conf.d/01proxy
+
+    mkdir /image
 "
 
 rsync -aHAX --numeric-ids --chown=root:root oem/after/ root/
