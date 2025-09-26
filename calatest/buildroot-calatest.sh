@@ -26,11 +26,6 @@ systemd-nspawn -D root --machine=calatest bash -c "
         linux-modules-extra-6.8.0-31-generic \
         squashfs-tools \
         busybox-syslogd \
-        libfile-desktopentry-perl \
-        libfile-which-perl \
-        libpath-tiny-perl \
-        libset-scalar-perl \
-        perl \
         rsync \
         xserver-xorg \
         xserver-xorg-video-fbdev \
