@@ -5,24 +5,15 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-if [[ -z "$1" ]]; then
-    read -p 'choose root directory: ' root_input
-else
-    root_input=$1
-fi
 
-if [[ -z "$2" ]]; then
-    read -p 'name your image: ' image_name
-else
-    image_name=$2
-fi
+root=$(realpath root)
 
-root=$(realpath $root_input)
+image_name=minibuntu-rescue
 
 mkdir -p image/{.disk,casper,isolinux,install}
 
-cp "$root/boot/vmlinuz-6.8.0-31-generic" image/casper/vmlinuz
-cp "$root/boot/initrd.img-6.8.0-31-generic" image/casper/initrd
+cp "$root/boot/vmlinuz-6.14.0-15-generic" image/casper/vmlinuz
+cp "$root/boot/initrd.img-6.14.0-15-generic" image/casper/initrd
 
 wget --progress=dot -O image/memtest.zip \
     https://www.memtest.org/download/v7.20/mt86plus_7.20.binaries.zip
@@ -116,7 +107,7 @@ find . -type f -print0 | xargs -0 md5sum | grep -v -e 'isolinux' \
 
 cd ..
 
-cp -r "$root"/image .
+cp -r "$root/image" .
 
 mksquashfs "$root" image/casper/filesystem.squashfs \
    -noappend -no-duplicates -no-recovery \

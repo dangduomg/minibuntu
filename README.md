@@ -42,7 +42,7 @@ This is optional but is used for testing:
 3. `cd` to the folder of any spin you want, like `rescue`
 4. Run `sudo ./buildroot-<spinname>.sh` in the folder to build the root of
 that spin
-5. Once the root is built, run `../buildiso.sh` to build a ready to use ISO
+5. Once the root is built, run `./buildiso.sh` to build a ready to use ISO
 
 # Screenshots
 
