@@ -25,7 +25,7 @@ systemd-nspawn -D root --machine=rescue bash -c "
     apt-get update
 
     apt-get install --no-install-recommends -y \
-        linux-modules-extra-6.8.0-31-generic \
+        linux-modules-extra-6.14.0-15-generic \
         wpasupplicant \
         xorg \
         xfce4 \
