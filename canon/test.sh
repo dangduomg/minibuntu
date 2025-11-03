@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [[ "$EUID" -ne 0 ]]; then
+    echo 'run this script as root'
+    exit 1
+fi
+
+if [[ ! -d root ]]; then
+    source ./buildroot.sh
+fi
+
+source ./buildiso.sh
+
+if [[ ! -f target.qcow2 ]]; then
+    qemu-img create -f qcow2 target.qcow2 10G
+fi
+
+qemu-system-x86_64 -enable-kvm -m 2G -hda target.qcow2 -cdrom "$iso_name"
+
