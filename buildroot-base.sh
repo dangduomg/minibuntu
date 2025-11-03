@@ -10,11 +10,8 @@ if [[ ! -f bootstrap.tar.gz ]]; then
         rm -r bootstrap
     fi
     mkdir bootstrap
-    export http_proxy=http://127.0.0.1:3142
-    debootstrap --foreign --arch=amd64 --variant=minbase plucky bootstrap
-    chroot bootstrap /debootstrap/debootstrap --second-stage
-    tar -czf bootstrap.tar.gz -C bootstrap .
-    rm -r bootstrap
+    debootstrap --arch=amd64 --variant=minbase \
+        --make-tarball=bootstrap.tar.gz noble bootstrap
 fi
 
 if [[ -d root-base ]]; then
@@ -23,7 +20,7 @@ fi
 mkdir root-base
 
 debootstrap --unpack-tarball="$(realpath bootstrap.tar.gz)" \
-    plucky root-base
+    noble root-base
     
 rsync -aHAX --numeric-ids --chown=root:root oem-base/before/ root-base/
 
@@ -37,7 +34,8 @@ systemd-nspawn -D root-base --machine=base /bin/bash -c "
 
     apt-get install --no-install-recommends -y \
         systemd-sysv \
-        linux-image-6.14.0-15-generic \
+        linux-image-6.8.0-31-generic \
+        linux-modules-extra-6.8.0-31-generic \
         grub-pc \
         grub-efi-amd64-signed \
         shim-signed \
@@ -48,7 +46,7 @@ systemd-nspawn -D root-base --machine=base /bin/bash -c "
         systemd-resolved \
         iputils-ping \
         console-setup \
-        polkitd \
+        policykit-1 \
         sudo \
         nano
 

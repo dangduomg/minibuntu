@@ -24,7 +24,6 @@ systemd-nspawn -D root --machine=minibuntu-canon bash -c "
     
     # core
     apt-get install --no-install-recommends -y \
-        linux-modules-extra-6.14.0-15-generic \
         plymouth plymouth-theme-ubuntu-gnome-logo \
         lightdm \
         xdg-user-dirs \
