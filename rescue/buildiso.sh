@@ -10,6 +10,8 @@ root=$(realpath root)
 
 image_name=minibuntu-rescue
 
+iso_name="$image_name-$(date +%Y.%m.%d.%H.%M.%S).iso"
+
 mkdir -p image/{.disk,casper,isolinux,install}
 
 cp "$root/boot/vmlinuz-6.14.0-15-generic" image/casper/vmlinuz
@@ -132,7 +134,7 @@ sudo xorriso \
    -full-iso9660-filenames \
    -J -J -joliet-long \
    -volid MINIBUNTU \
-   -output "../$image_name-$(date +%Y.%m.%d.%H.%M.%S).iso" \
+   -output "../$iso_name" \
    -eltorito-boot isolinux/bios.img \
      -no-emul-boot \
      -boot-load-size 4 \
