@@ -47,7 +47,6 @@ systemd-nspawn -D root --machine=rescue bash -c "
         gparted \
         hardinfo \
         ghex \
-        epiphany-browser \
         viewnior \
         xpdf \
         xsol \
@@ -62,13 +61,15 @@ systemd-nspawn -D root --machine=rescue bash -c "
         -f /pkgs/*
 
     rm -r /pkgs
-        
-    apt-get clean
-    rm -r /var/lib/apt/lists/*
-    
-    rm /etc/apt/apt.conf.d/01proxy
-
-    mkdir /image
 "
 
 rsync -aHAX --numeric-ids --chown=root:root oem/after/ root/
+
+systemd-nspawn -D root bash -c "
+    apt-get install --no-install-recommends -y -f /pkgs/*
+    rm -r /pkgs
+        
+    apt-get clean
+    
+    rm /etc/apt/apt.conf.d/01proxy
+"
