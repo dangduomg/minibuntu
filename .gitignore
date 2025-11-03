@@ -4,6 +4,7 @@ work/
 
 # no built roots
 bootstrap.tar.gz
+bootstrap/
 root-base/
 **/root/
 
