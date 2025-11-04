@@ -12,3 +12,5 @@ fi
 source ./buildiso.sh
 
 qemu-system-x86_64 -enable-kvm -m 2G -cdrom "$iso_name"
+
+rm "$iso_name"
