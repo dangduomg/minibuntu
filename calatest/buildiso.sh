@@ -16,12 +16,6 @@ mkdir -p image/{.disk,casper,isolinux,install}
 cp "$root/boot/vmlinuz-6.8.0-31-generic" image/casper/vmlinuz
 cp "$root/boot/initrd.img-6.8.0-31-generic" image/casper/initrd
 
-wget --progress=dot -O image/memtest.zip \
-    https://www.memtest.org/download/v7.20/mt86plus_7.20.binaries.zip
-unzip -p image/memtest.zip memtest64.bin > image/install/memtest86+.bin
-unzip -p image/memtest.zip memtest64.efi > image/install/memtest86+.efi
-rm image/memtest.zip
-
 touch image/ubuntu
 
 
@@ -29,35 +23,13 @@ cat > image/isolinux/grub.cfg <<EOF
 
 search --set=root --file /ubuntu
 
-insmod all_video
-
 set default="0"
-set timeout=30
+set timeout=0
 
 menuentry "Run $image_name" {
-   linux /casper/vmlinuz boot=casper quiet splash ---
+   linux /casper/vmlinuz boot=casper ---
    initrd /casper/initrd
 }
-
-menuentry "Check disc for defects" {
-   linux /casper/vmlinuz boot=casper integrity-check ---
-   initrd /casper/initrd
-}
-
-grub_platform
-if [ "\$grub_platform" = "efi" ]; then
-menuentry 'UEFI Firmware Settings' {
-   fwsetup
-}
-
-menuentry "Test memory Memtest86+ (UEFI)" {
-   linux /install/memtest86+.efi
-}
-else
-menuentry "Test memory Memtest86+ (BIOS)" {
-   linux16 /install/memtest86+.bin
-}
-fi
 
 EOF
 
@@ -74,21 +46,6 @@ cat > README.diskdefines <<EOF
 #define TOTALNUM  0
 #define TOTALNUM0  1
 EOF
-
-cp "$root/usr/lib/shim/shimx64.efi.signed.previous" isolinux/bootx64.efi
-cp "$root/usr/lib/shim/mmx64.efi" isolinux/mmx64.efi
-cp "$root/usr/lib/grub/x86_64-efi-signed/grubx64.efi.signed" isolinux/grubx64.efi
-
-(
-    cd isolinux && \
-    dd if=/dev/zero of=efiboot.img bs=1M count=10 && \
-    mkfs.vfat -F 16 efiboot.img && \
-    LC_CTYPE=C mmd -i efiboot.img efi efi/ubuntu efi/boot && \
-    LC_CTYPE=C mcopy -i efiboot.img ./bootx64.efi ::efi/boot/bootx64.efi && \
-    LC_CTYPE=C mcopy -i efiboot.img ./mmx64.efi ::efi/boot/mmx64.efi && \
-    LC_CTYPE=C mcopy -i efiboot.img ./grubx64.efi ::efi/boot/grubx64.efi && \
-    LC_CTYPE=C mcopy -i efiboot.img ./grub.cfg ::efi/ubuntu/grub.cfg
-)
 
 grub-mkstandalone \
     --format=i386-pc \
@@ -112,7 +69,7 @@ cp -r "$root/image" .
 mksquashfs "$root" image/casper/filesystem.squashfs \
    -noappend -no-duplicates -no-recovery \
    -wildcards \
-   -comp xz -b 1M -Xdict-size 100% \
+   -no-compression \
    -e "image" \
    -e "var/cache/apt/archives/*" \
    -e "root/*" \
@@ -142,23 +99,9 @@ sudo xorriso \
      --grub2-mbr "$root/usr/lib/grub/i386-pc/boot_hybrid.img" \
      -partition_offset 16 \
      --mbr-force-bootable \
-   -eltorito-alt-boot \
-     -no-emul-boot \
-     -e isolinux/efiboot.img \
-     -append_partition 2 28732ac11ff8d211ba4b00a0c93ec93b isolinux/efiboot.img \
-     -appended_part_as_gpt \
-     -iso_mbr_part_type a2a0d0ebe5b9334487c068b6b72699c7 \
-     -m "isolinux/efiboot.img" \
-     -m "isolinux/bios.img" \
-     -e '--interval:appended_partition_2:::' \
    -exclude isolinux \
    -graft-points \
-      "/EFI/boot/bootx64.efi=isolinux/bootx64.efi" \
-      "/EFI/boot/mmx64.efi=isolinux/mmx64.efi" \
-      "/EFI/boot/grubx64.efi=isolinux/grubx64.efi" \
-      "/EFI/ubuntu/grub.cfg=isolinux/grub.cfg" \
       "/isolinux/bios.img=isolinux/bios.img" \
-      "/isolinux/efiboot.img=isolinux/efiboot.img" \
       "."
 
 cd ..
