@@ -13,8 +13,8 @@ iso_name="$image_name-$(date +%Y.%m.%d.%H.%M.%S).iso"
 
 mkdir -p image/{.disk,casper,isolinux,install}
 
-cp "$root/boot/vmlinuz-6.14.0-15-generic" image/casper/vmlinuz
-cp "$root/boot/initrd.img-6.14.0-15-generic" image/casper/initrd
+cp "$root/boot/vmlinuz-6.8.0-31-generic" image/casper/vmlinuz
+cp "$root/boot/initrd.img-6.8.0-31-generic" image/casper/initrd
 
 wget --progress=dot -O image/memtest.zip \
     https://www.memtest.org/download/v7.20/mt86plus_7.20.binaries.zip
