@@ -67,9 +67,6 @@ systemd-nspawn -D root --machine=minibuntu-canon bash -c "
 
     # web browser
     apt-get install --no-install-recommends -y epiphany-browser
-
-    # snap
-    apt-get install --no-install-recommends -y gnome-software-plugin-snap
 "
 
 rsync -aHAX --numeric-ids --chown=root:root oem/after/ root/
