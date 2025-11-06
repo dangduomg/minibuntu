@@ -23,7 +23,6 @@ systemd-nspawn -D root --machine=calatest bash -c "
     apt-get update
     
     apt-get install --no-install-recommends -y \
-        linux-modules-extra-6.8.0-31-generic \
         squashfs-tools \
         busybox-syslogd \
         rsync \
@@ -33,8 +32,8 @@ systemd-nspawn -D root --machine=calatest bash -c "
         lightdm \
         lightdm-autologin-greeter \
         openbox \
-        xterm \
-        calamares
+        calamares \
+        xterm
 "
 
 rsync -aHAX --numeric-ids --chown=root:root oem/after/ root/
