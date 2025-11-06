@@ -9,7 +9,7 @@ if [[ ! -d root ]]; then
     source ./buildroot.sh
 fi
 
-source ./buildiso.sh
+source ./buildiso-test.sh
 
 if [[ ! -f target.qcow2 ]]; then
     qemu-img create -f qcow2 target.qcow2 10G
