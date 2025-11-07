@@ -39,7 +39,7 @@ systemd-nspawn -D root --machine=minibuntu-canon bash -c "
     apt-get install --no-install-recommends -y \
         xorg xfce4 xfce4-terminal xfce4-notifyd tumbler \
         xfce4-pulseaudio-plugin xfce4-power-manager-plugins \
-        network-manager-gnome xscreensaver
+        network-manager-gnome lightdm-gtk-greeter light-locker
 
     # theme
     apt-get install -y \
