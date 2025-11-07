@@ -62,6 +62,7 @@ systemd-nspawn -D root --machine=minibuntu-canon bash -c "
         eom \
         parole \
         pavucontrol \
+        xfce4-screenshooter \
         atril \
         abiword \
         gnumeric
