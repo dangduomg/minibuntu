@@ -18,7 +18,9 @@ root-base/
 
 # the calamares settings in calatest is temporary; its for testing only
 calatest/calamares-settings/
-calatest/oem/after/pkgs/calamares-settings-calatest.deb
+
+# calamares settings debs
+**/oem/after/pkgs/calamares-settings-*.deb
 
 # linux-firmware-*.deb (large heavy debs)
 **/linux-firmware-*.deb
