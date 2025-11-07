@@ -1,0 +1,26 @@
+---
+componentName: minibuntu
+
+windowExpanding:    normal
+windowSize:         800x600
+
+strings:
+    productName:         minibuntu-canon
+    shortProductName:    minibuntu-canon
+    version:             24.04 LTS
+    shortVersion:        noble
+    versionedName:       minibuntu-canon
+    shortVersionedName:  minibuntu-canon 24.04 LTS
+    bootloaderEntryName: Ubuntu
+
+images:
+    productLogo:         "logo.png"
+
+slideshow:               "show.qml"
+
+slideshowAPI:            1
+
+style:
+   SidebarBackground:    "#808080"
+   SidebarText:          "#FFFFFF"
+   SidebarTextCurrent:   "#0068C8"

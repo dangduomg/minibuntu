@@ -69,6 +69,12 @@ systemd-nspawn -D root --machine=minibuntu-canon bash -c "
 
     # web browser
     apt-get install --no-install-recommends -y epiphany-browser
+
+    # calamares installer
+    apt-get install --no-install-recommends -y \
+        rsync \
+        busybox-syslogd \
+        calamares
 "
 
 rsync -aHAX --numeric-ids --chown=root:root oem/after/ root/
