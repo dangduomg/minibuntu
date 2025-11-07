@@ -49,7 +49,6 @@ systemd-nspawn -D root --machine=minibuntu-canon bash -c "
     apt-get install --no-install-recommends -y \
         policykit-1-gnome \
         xfce4-taskmanager \
-        dconf-editor \
         synaptic \
         gdebi \
         gnome-software \
