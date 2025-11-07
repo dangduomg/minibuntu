@@ -58,7 +58,7 @@ systemd-nspawn -D root --machine=minibuntu-canon bash -c "
     
     # utilities
     apt-get install --no-install-recommends -y \
-        galculator \
+        mate-calc \
         pluma \
         eom \
         parole \
