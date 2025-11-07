@@ -25,11 +25,14 @@ systemd-nspawn -D root --machine=minibuntu-canon bash -c "
     # core
     apt-get install --no-install-recommends -y \
         linux-firmware \
+        locales \
         plymouth plymouth-theme-ubuntu-gnome-logo \
         lightdm \
         xdg-user-dirs \
         pulseaudio \
         gvfs gvfs-fuse gvfs-backends
+
+    dpkg-reconfigure locales
 
     # autologin
     apt-get install --no-install-recommends -y lightdm-autologin-greeter
