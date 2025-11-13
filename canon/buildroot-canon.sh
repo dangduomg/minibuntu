@@ -97,6 +97,7 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
 "
 
 systemd-nspawn -b -D root --machine=minibuntu-canon > /dev/null &
+
 until machinectl show minibuntu-canon | grep -q "State=running"; do
     sleep 1
 done
