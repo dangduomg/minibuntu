@@ -16,7 +16,7 @@ mkdir root
 
 rsync -aHAX --numeric-ids --delete ../root-base/ root/
 
-systemd-nspawn -D root --machine=minibuntu-canon bash -c "
+systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
     echo 'Acquire::http::Proxy \"http://127.0.0.1:3142\";' \
         > /etc/apt/apt.conf.d/01proxy
 
@@ -25,14 +25,13 @@ systemd-nspawn -D root --machine=minibuntu-canon bash -c "
     # core
     apt-get install --no-install-recommends -y \
         linux-firmware \
+        wpasupplicant \
         locales \
         plymouth plymouth-theme-ubuntu-gnome-logo \
         lightdm \
         xdg-user-dirs \
         pulseaudio \
         gvfs gvfs-fuse gvfs-backends
-
-    dpkg-reconfigure locales
 
     # autologin
     apt-get install --no-install-recommends -y lightdm-autologin-greeter
@@ -57,7 +56,13 @@ systemd-nspawn -D root --machine=minibuntu-canon bash -c "
         gnome-software \
         gnome-software-plugin-flatpak \
         ubuntu-release-upgrader-gtk
-    
+
+    # system tools (live only)
+    apt-get install --no-install-recommends -y \
+        usb-creator-gtk \
+        gparted \
+        hardinfo
+
     # utilities
     apt-get install --no-install-recommends -y \
         mate-calc \
@@ -82,7 +87,7 @@ systemd-nspawn -D root --machine=minibuntu-canon bash -c "
 
 rsync -aHAX --numeric-ids --chown=root:root oem/after/ root/
 
-systemd-nspawn -D root bash -c "
+systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
     apt-get install --no-install-recommends -y -f /pkgs/*
     rm -r /pkgs
         
@@ -90,3 +95,13 @@ systemd-nspawn -D root bash -c "
     
     rm /etc/apt/apt.conf.d/01proxy
 "
+
+systemd-nspawn -b -D root --machine=minibuntu-canon > /dev/null &
+until machinectl show minibuntu-canon | grep -q "State=running"; do
+    sleep 1
+done
+machinectl shell minibuntu-canon /bin/bash -c "
+    flatpak remote-add --if-not-exists flathub \
+        https://dl.flathub.org/repo/flathub.flatpakrepo
+"
+machinectl poweroff minibuntu-canon
