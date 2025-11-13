@@ -11,9 +11,10 @@ fi
 
 source ./buildiso.sh
 
-if [[ ! -f target.qcow2 ]]; then
-    qemu-img create -f qcow2 target.qcow2 10G
+if [[ -f target.qcow2 ]]; then
+    rm target.qcow2
 fi
+qemu-img create -f qcow2 target.qcow2 10G
 
 qemu-system-x86_64 -enable-kvm -m 2G -hda target.qcow2 -cdrom "$iso_name"
 
