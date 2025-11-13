@@ -23,6 +23,7 @@ systemd-nspawn -D root --machine=calatest bash -c "
     apt-get update
     
     apt-get install --no-install-recommends -y \
+        locales \
         squashfs-tools \
         busybox-syslogd \
         rsync \
@@ -31,6 +32,7 @@ systemd-nspawn -D root --machine=calatest bash -c "
         xserver-xorg-input-libinput \
         lightdm \
         lightdm-autologin-greeter \
+        lightdm-gtk-greeter \
         openbox \
         calamares \
         xterm
