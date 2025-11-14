@@ -1,11 +1,12 @@
 # minibuntu
  A set of Ubuntu spins with a mission for smallness.
 
-Right now contains four spins:
+Right now contains five spins:
 - base (internal)
 - rescue
 - calatest (internal)
 - carl (private, tailored to @carldev14)
+- canon (this is the canonical distro; can be referred simply as "minibuntu")
 
 # What is special about minibuntu
 Compare minibuntu-rescue with SystemRescue:
@@ -14,6 +15,11 @@ Compare minibuntu-rescue with SystemRescue:
 
 As can be seen, minibuntu-rescue is only about half the size of
 SystemRescue, while still having enough features to be usable.
+
+Even with minibuntu-canon, which is twice as heavy, compare with Xubuntu's
+official ISO:
+- minibuntu-canon-2025.11.12.23.24.32.iso: 1.33 GiB
+- xubuntu-24.04.3-desktop-amd64.iso: ~4.0 GB
 
 minibuntu spins aim to reduce ISO size as much as possible while still
 being feature-rich and broadly compatible with most PCs. This reduces
@@ -45,6 +51,9 @@ that spin
 5. Once the root is built, run `./buildiso.sh` to build a ready to use ISO
 
 # Screenshots
+
+minibuntu on QEMU:
+![](./screenshots/canon.png)
 
 minibuntu-rescue on QEMU running htop (very light!):
 ![](./screenshots/htop.png)
