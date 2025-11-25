@@ -31,10 +31,8 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         lightdm \
         xdg-user-dirs \
         pulseaudio \
-        gvfs gvfs-fuse gvfs-backends
-
-    # autologin
-    apt-get install --no-install-recommends -y lightdm-autologin-greeter
+        gvfs gvfs-fuse gvfs-backends \
+        dosfstools mtools exfatprogs ntfs-3g
     
     # ui
     # i put xfce4-terminal here to override xorg's gnome-terminal default
