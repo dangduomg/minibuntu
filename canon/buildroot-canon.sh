@@ -37,9 +37,9 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
     # ui
     # i put xfce4-terminal here to override xorg's gnome-terminal default
     apt-get install --no-install-recommends -y \
-        xorg xfce4 xfce4-terminal xfce4-notifyd tumbler \
-        xfce4-pulseaudio-plugin xfce4-power-manager-plugins \
-        network-manager-gnome lightdm-gtk-greeter light-locker
+        xorg xfce4 xfce4-notifyd tumbler xfce4-pulseaudio-plugin \
+        xfce4-power-manager-plugins network-manager-gnome \
+        lightdm-gtk-greeter light-locker
 
     # theme
     apt-get install -y \
