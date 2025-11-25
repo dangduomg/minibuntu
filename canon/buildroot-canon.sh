@@ -57,12 +57,6 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         gnome-software-plugin-flatpak \
         ubuntu-release-upgrader-gtk
 
-    # system tools (live only)
-    apt-get install --no-install-recommends -y \
-        usb-creator-gtk \
-        gparted \
-        hardinfo
-
     # utilities
     apt-get install --no-install-recommends -y \
         mate-calc \
@@ -78,7 +72,16 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
     # web browser
     apt-get install --no-install-recommends -y epiphany-browser
 
-    # calamares installer
+    # system tools (live only)
+    apt-get install --no-install-recommends -y \
+        usb-creator-gtk \
+        gparted \
+        hardinfo
+
+    # autologin (live only)
+    apt-get install --no-install-recommends -y lightdm-autologin-greeter
+
+    # calamares installer (live only)
     apt-get install --no-install-recommends -y \
         rsync \
         busybox-syslogd \
