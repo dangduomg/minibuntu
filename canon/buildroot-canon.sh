@@ -64,6 +64,7 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         pavucontrol \
         xfce4-screenshooter \
         atril \
+        engrampa \
         abiword \
         gnumeric
 
