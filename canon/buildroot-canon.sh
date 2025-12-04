@@ -16,9 +16,11 @@ mkdir root
 
 rsync -aHAX --numeric-ids --delete ../root-base/ root/
 
+rsync -aHAX --numeric-ids --chown=root:root oem/before/ root/
+
 systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
-    echo 'Acquire::http::Proxy \"http://127.0.0.1:3142\";' \
-        > /etc/apt/apt.conf.d/01proxy
+    echo 'Acquire::http::Proxy \"http://127.0.0.1:3142\";' > /proxy
+    cp /proxy /etc/apt/apt.conf.d/01proxy
 
     apt-get update
     
@@ -32,7 +34,9 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         xdg-user-dirs \
         pulseaudio \
         gvfs gvfs-fuse gvfs-backends \
-        dosfstools mtools exfatprogs ntfs-3g
+        dosfstools mtools exfatprogs ntfs-3g \
+        python3-psutil \
+        gnupg
     
     # ui
     # i put xfce4-terminal here to override xorg's gnome-terminal default
@@ -58,7 +62,6 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
     # utilities
     apt-get install --no-install-recommends -y \
         mate-calc \
-        pluma \
         eom \
         parole \
         pavucontrol \
@@ -66,10 +69,10 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         atril \
         engrampa \
         abiword \
-        gnumeric
-
-    # web browser
-    apt-get install --no-install-recommends -y epiphany-browser
+        gnumeric \
+        menulibre \
+        xfce4-panel-profiles
+    apt-get install --no-install-recommends -y pluma
 
     # system tools (live only)
     apt-get install --no-install-recommends -y \
@@ -87,24 +90,34 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         calamares
 "
 
-rsync -aHAX --numeric-ids --chown=root:root oem/after/ root/
-
-systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
-    apt-get install --no-install-recommends -y -f /pkgs/*
-    rm -r /pkgs
-        
-    apt-get clean
-    
-    rm /etc/apt/apt.conf.d/01proxy
-"
-
 systemd-nspawn -b -D root --machine=minibuntu-canon > /dev/null &
 
 until machinectl show minibuntu-canon | grep -q "State=running"; do
     sleep 1
 done
 machinectl shell minibuntu-canon /bin/bash -c "
+    # web browser (external repo)
+    rm /etc/apt/apt.conf.d/01proxy
+    gpg -n -q --import --import-options import-show \
+        /etc/apt/keyrings/packages.mozilla.org.asc
+    apt-get update && apt-get install --no-install-recommends -y firefox
+    cp /proxy /etc/apt/apt.conf.d/01proxy
+
     flatpak remote-add --if-not-exists flathub \
         https://dl.flathub.org/repo/flathub.flatpakrepo
 "
 machinectl poweroff minibuntu-canon
+while machinectl list | grep -q minibuntu-canon; do
+    sleep 1
+done
+
+rsync -aHAX --numeric-ids --chown=root:root oem/after/ root/
+
+systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
+    apt-get install --no-install-recommends -y -f /pkgs/*
+    rm -r /pkgs
+
+    apt-get clean
+    
+    rm /proxy /etc/apt/apt.conf.d/01proxy
+"
