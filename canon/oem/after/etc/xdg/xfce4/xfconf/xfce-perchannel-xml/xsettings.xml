@@ -24,13 +24,13 @@
     <property name="CanChangeAccels" type="empty"/>
     <property name="ColorPalette" type="empty"/>
     <property name="FontName" type="string" value="Ubuntu Sans 10"/>
-    <property name="MonospaceFontName" type="empty"/>
+    <property name="MonospaceFontName" type="string" value="Ubuntu Sans Mono 10"/>
     <property name="IconSizes" type="empty"/>
     <property name="KeyThemeName" type="empty"/>
     <property name="ToolbarStyle" type="empty"/>
     <property name="ToolbarIconSize" type="empty"/>
-    <property name="MenuImages" type="empty"/>
-    <property name="ButtonImages" type="empty"/>
+    <property name="MenuImages" type="bool" value="true"/>
+    <property name="ButtonImages" type="bool" value="true"/>
     <property name="MenuBarAccel" type="empty"/>
     <property name="CursorThemeName" type="string" value="Bibata-Modern-Classic"/>
     <property name="CursorThemeSize" type="int" value="24"/>
