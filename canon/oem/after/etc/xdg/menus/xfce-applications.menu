@@ -29,7 +29,6 @@
         <Filename>xfce-settings-manager.desktop</Filename>
         <Separator/>
         <Merge type="all"/>
-        <Separator/>
         <Filename>xfce4-appfinder.desktop</Filename>
         <Separator/>
         <Filename>xfce4-session-logout.desktop</Filename>
