@@ -29,8 +29,6 @@
         <value type="int" value="9"/>
         <value type="int" value="11"/>
         <value type="int" value="12"/>
-        <value type="int" value="13"/>
-        <value type="int" value="10"/>
       </property>
     </property>
   </property>
@@ -62,9 +60,6 @@
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-12" type="string" value="clock"/>
-    <property name="plugin-13" type="string" value="separator">
-      <property name="style" type="uint" value="0"/>
-    </property>
     <property name="plugin-15" type="string" value="showdesktop"/>
     <property name="plugin-17" type="string" value="launcher">
       <property name="items" type="array">
@@ -85,7 +80,6 @@
       <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="true"/>
     </property>
-    <property name="plugin-10" type="string" value="actions"/>
     <property name="plugin-16" type="string" value="notification-plugin"/>
     <property name="plugin-20" type="string" value="launcher">
       <property name="items" type="array">
