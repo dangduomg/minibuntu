@@ -36,7 +36,8 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         gvfs gvfs-fuse gvfs-backends \
         dosfstools mtools exfatprogs ntfs-3g \
         python3-psutil \
-        gnupg
+        gnupg \
+        systemd-timesyncd
     
     # ui
     # i put xfce4-terminal here to override xorg's gnome-terminal default
@@ -70,8 +71,7 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         engrampa \
         abiword \
         gnumeric \
-        menulibre \
-        xfce4-panel-profiles
+        menulibre
     apt-get install --no-install-recommends -y pluma
 
     # system tools (live only)
