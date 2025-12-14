@@ -8,10 +8,10 @@
     <DefaultDirectoryDirs/>
 
     <Include>
-        <Filename>xfce4-terminal-emulator.desktop</Filename>
         <Filename>xfce4-file-manager.desktop</Filename>
+        <Filename>xfce4-terminal-emulator.desktop</Filename>
+        <Filename>xfce4-mail-reader.desktop</Filename>
         <Filename>xfce4-web-browser.desktop</Filename>
-        <Filename>org.gnome.Software.desktop</Filename>
         <Filename>xfce-settings-manager.desktop</Filename>
         <Filename>xfce4-run.desktop</Filename>
         <Filename>xfce4-appfinder.desktop</Filename>
@@ -19,16 +19,16 @@
     </Include>
 
     <Layout>
-        <Filename>xfce4-run.desktop</Filename>
-        <Separator/>
         <Filename>xfce4-terminal-emulator.desktop</Filename>
         <Filename>xfce4-file-manager.desktop</Filename>
+        <Filename>xfce4-mail-reader.desktop</Filename>
         <Filename>xfce4-web-browser.desktop</Filename>
-        <Filename>org.gnome.Software.desktop</Filename>
         <Separator/>
         <Filename>xfce-settings-manager.desktop</Filename>
         <Separator/>
         <Merge type="all"/>
+        <Separator/>
+        <Filename>xfce4-run.desktop</Filename>
         <Filename>xfce4-appfinder.desktop</Filename>
         <Separator/>
         <Filename>xfce4-session-logout.desktop</Filename>
@@ -138,7 +138,6 @@
         </Include>
         <Exclude>
             <Or>
-                <Filename>org.gnome.Software.desktop</Filename>
                 <Filename>xfce4-session-logout.desktop</Filename>
             </Or>
         </Exclude>
