@@ -24,21 +24,21 @@ systemd-nspawn -D root --machine=rescue bash -c "
 
     apt-get update
 
+    # core
     apt-get install --no-install-recommends -y \
         wpasupplicant \
-        xorg \
-        xfce4 \
         libasound2t64 \
         libdbus-glib-1-2 \
-        policykit-1-gnome \
-        gvfs \
-        dosfstools \
-        mtools \
-        exfatprogs \
-        ntfs-3g \
+        gvfs dosfstools mtools exfatprogs ntfs-3g
+    
+    # ui
+    apt-get install --no-install-recommends -y \
+        xorg xfce4 tango-icon-theme policykit-1-gnome \
         thunar-volman \
         network-manager-gnome \
-        tango-icon-theme \
+    
+    # utilities
+    apt-get install --no-install-recommends -y \
         lxterminal \
         htop \
         mousepad \
