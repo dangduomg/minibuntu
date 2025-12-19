@@ -55,7 +55,6 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         policykit-1-gnome \
         xfce4-taskmanager \
         synaptic \
-        gdebi \
         gnome-software \
         gnome-software-plugin-flatpak \
         ubuntu-release-upgrader-gtk
@@ -63,6 +62,7 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
     # utilities
     apt-get install --no-install-recommends -y \
         mate-calc \
+        pluma \
         eom \
         parole \
         pavucontrol \
@@ -72,7 +72,6 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         abiword \
         gnumeric \
         menulibre
-    apt-get install --no-install-recommends -y pluma
 
     # system tools (live only)
     apt-get install --no-install-recommends -y \
@@ -96,12 +95,16 @@ until machinectl show minibuntu-canon | grep -q "State=running"; do
     sleep 1
 done
 machinectl shell minibuntu-canon /bin/bash -c "
-    # web browser (external repo)
+    # external repo
     rm /etc/apt/apt.conf.d/01proxy
     gpg -n -q --import --import-options import-show \
         /etc/apt/keyrings/packages.mozilla.org.asc
-    apt-get update && apt-get install --no-install-recommends -y firefox
-    cp /proxy /etc/apt/apt.conf.d/01proxy
+
+    sudo add-apt-repository ppa:yannubuntu/boot-repair
+
+    apt-get update
+    apt-get install --no-install-recommends -y firefox
+    apt-get install --no-install-recommends -y boot-repair
 
     flatpak remote-add --if-not-exists flathub \
         https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -114,6 +117,8 @@ done
 rsync -aHAX --numeric-ids --chown=root:root oem/after/ root/
 
 systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
+    # come back to internal repo
+    cp /proxy /etc/apt/apt.conf.d/01proxy
     apt-get install --no-install-recommends -y -f /pkgs/*
     rm -r /pkgs
 
