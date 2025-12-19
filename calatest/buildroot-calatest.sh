@@ -23,6 +23,7 @@ systemd-nspawn -D root --machine=calatest bash -c "
     apt-get update
     
     apt-get install --no-install-recommends -y \
+        python3-xdg \
         locales \
         squashfs-tools \
         busybox-syslogd \
