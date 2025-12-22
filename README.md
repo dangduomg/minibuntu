@@ -16,9 +16,9 @@ Compare minibuntu-rescue with SystemRescue:
 As can be seen, minibuntu-rescue is only about half the size of
 SystemRescue, while still having enough features to be usable.
 
-Even with minibuntu-canon, which is twice as heavy, compare with Xubuntu's
-official ISO:
-- minibuntu-canon-2025.11.12.23.24.32.iso: 1.33 GiB
+Even with minibuntu-canon, which is more than twice as heavy, compare with
+Xubuntu's official ISO:
+- minibuntu-canon-2025.12.18.00.07.39.iso: 1.44 GiB
 - xubuntu-24.04.3-desktop-amd64.iso: ~4.0 GB
 
 minibuntu spins aim to reduce ISO size as much as possible while still
