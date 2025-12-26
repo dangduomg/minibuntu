@@ -82,10 +82,11 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
     # autologin (live only)
     apt-get install --no-install-recommends -y lightdm-autologin-greeter
 
-    # calamares installer (live only)
+    # calamares installer and qt themes (live only)
     apt-get install --no-install-recommends -y \
         rsync \
         busybox-syslogd \
+        qt5ct qt5-style-kvantum orchis-kde \
         calamares
 "
 
@@ -100,7 +101,7 @@ machinectl shell minibuntu-canon /bin/bash -c "
     gpg -n -q --import --import-options import-show \
         /etc/apt/keyrings/packages.mozilla.org.asc
 
-    sudo add-apt-repository ppa:yannubuntu/boot-repair
+    sudo add-apt-repository -y ppa:yannubuntu/boot-repair
 
     apt-get update
     apt-get install --no-install-recommends -y firefox
