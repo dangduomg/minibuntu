@@ -103,8 +103,12 @@ machinectl shell minibuntu-canon /bin/bash -c "
     sudo add-apt-repository -y ppa:yannubuntu/boot-repair
 
     apt-get update
-    apt-get install --no-install-recommends -y firefox
+
+    # system tools (live only)
     apt-get install --no-install-recommends -y boot-repair
+
+    # browser
+    apt-get install --no-install-recommends -y firefox
 
     flatpak remote-add --if-not-exists flathub \
         https://dl.flathub.org/repo/flathub.flatpakrepo
