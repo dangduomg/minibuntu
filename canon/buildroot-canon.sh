@@ -54,6 +54,7 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         policykit-1-gnome \
         xfce4-taskmanager \
         synaptic \
+        gnome-system-tools \
         gnome-software \
         gnome-software-plugin-flatpak \
         ubuntu-release-upgrader-gtk
@@ -74,6 +75,7 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
     # system tools (live only)
     apt-get install --no-install-recommends -y \
         usb-creator-gtk \
+        gnome-disk-utility \
         gparted \
         hardinfo
 
