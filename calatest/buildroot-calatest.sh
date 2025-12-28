@@ -35,6 +35,8 @@ systemd-nspawn -D root --machine=calatest bash -c "
         lightdm-autologin-greeter \
         lightdm-gtk-greeter \
         openbox \
+        fonts-ubuntu \
+        qt5ct qt5-style-kvantum orchis-kde \
         calamares \
         xterm
 "
