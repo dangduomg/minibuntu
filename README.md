@@ -27,7 +27,7 @@ download time, great for people with low Internet bandwidth, with the
 side effect of being less bloated than normal ISOs as well.
 
 # Requirements
-Building any minibuntu spin now requires Ubuntu 25.04 amd64 or newer,
+Building any minibuntu spin now requires Ubuntu 24.04 amd64 or newer,
 along with these packages:
 - debootstrap
 - systemd-container
@@ -39,7 +39,7 @@ along with these packages:
 - apt-cacher-ng
 
 This is optional but is used for testing:
-- qemu-system-x86_64
+- qemu-system-x86
 
 # How to build
 1. Clone the project and `cd` to the project root
