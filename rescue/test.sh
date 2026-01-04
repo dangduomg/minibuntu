@@ -9,7 +9,7 @@ if [[ ! -d root ]]; then
     source ./buildroot.sh
 fi
 
-source ./buildiso.sh
+source ./buildiso-test.sh
 
 qemu-system-x86_64 -enable-kvm -m 2G -cdrom "$iso_name"
 
