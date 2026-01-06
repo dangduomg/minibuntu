@@ -53,7 +53,7 @@ ISO
 
 # Screenshots
 
-minibuntu on QEMU:
+minibuntu on QEMU (early version):
 ![](./screenshots/canon.png)
 
 minibuntu-rescue on QEMU running htop (very light!):
