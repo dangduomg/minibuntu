@@ -108,7 +108,7 @@ machinectl shell minibuntu-canon /bin/bash -c "
     apt-get update
 
     # system tools (live only)
-    apt-get install --no-install-recommends -y boot-repair
+    apt-get install --no-install-recommends -y libnotify-dev boot-repair
 
     # browser
     apt-get install --no-install-recommends -y firefox
