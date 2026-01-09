@@ -37,7 +37,6 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         gvfs gvfs-fuse gvfs-backends \
         dosfstools mtools exfatprogs ntfs-3g \
         python3-psutil \
-        gnupg \
         systemd-timesyncd \
         policykit-desktop-privileges
 
