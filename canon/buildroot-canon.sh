@@ -29,7 +29,7 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         linux-firmware \
         wpasupplicant \
         locales \
-        plymouth plymouth-theme-ubuntu-gnome-logo \
+        plymouth plymouth-themes \
         lightdm \
         xdg-user-dirs \
         xdg-user-dirs-gtk \
