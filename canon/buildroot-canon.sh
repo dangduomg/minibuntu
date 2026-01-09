@@ -40,6 +40,13 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         gnupg \
         systemd-timesyncd \
         policykit-desktop-privileges
+
+    # flatpak
+    # no packages is installed by default for lightness
+    apt-get install --no-install-recommends -y \
+        flatpak \
+        xdg-desktop-portal \
+        xdg-desktop-portal-gtk
     
     # ui
     apt-get install --no-install-recommends -y \
