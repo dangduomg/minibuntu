@@ -37,8 +37,7 @@ systemd-nspawn -D root --machine=minibuntu-openbox-experiment --as-pid2 bash -c 
         dosfstools mtools exfatprogs ntfs-3g \
         python3-psutil \
         python3-xdg \
-        gnupg \
-        systemd-timesyncd
+        gnupg
     
     # ui
     apt-get install --no-install-recommends -y \

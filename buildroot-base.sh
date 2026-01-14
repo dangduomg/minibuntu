@@ -44,6 +44,7 @@ systemd-nspawn -D root-base --machine=base /bin/bash -c "
         bash-completion \
         network-manager \
         systemd-resolved \
+        systemd-timesyncd \
         iputils-ping \
         console-setup \
         policykit-1 \
