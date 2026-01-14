@@ -36,8 +36,7 @@ systemd-nspawn -D root --machine=minibuntu-openbox-experiment --as-pid2 bash -c 
         gvfs gvfs-fuse gvfs-backends \
         dosfstools mtools exfatprogs ntfs-3g \
         python3-psutil \
-        python3-xdg \
-        gnupg
+        python3-xdg
     
     # ui
     apt-get install --no-install-recommends -y \
