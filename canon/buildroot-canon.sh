@@ -64,7 +64,8 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         gnome-system-tools \
         gnome-software \
         gnome-software-plugin-flatpak \
-        ubuntu-release-upgrader-gtk
+        ubuntu-release-upgrader-gtk \
+        language-selector-gnome
 
     # utilities
     apt-get install --no-install-recommends -y \
