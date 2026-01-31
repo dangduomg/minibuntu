@@ -27,15 +27,12 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
     # core
     apt-get install --no-install-recommends -y \
         linux-firmware \
-        wpasupplicant \
         locales \
         plymouth plymouth-themes \
         lightdm \
         xdg-user-dirs \
         xdg-user-dirs-gtk \
         pulseaudio \
-        gvfs gvfs-fuse gvfs-backends \
-        dosfstools mtools exfatprogs ntfs-3g \
         python3-psutil \
         policykit-desktop-privileges
 

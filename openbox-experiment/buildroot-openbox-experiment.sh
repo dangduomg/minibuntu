@@ -27,14 +27,11 @@ systemd-nspawn -D root --machine=minibuntu-openbox-experiment --as-pid2 bash -c 
     # core
     apt-get install --no-install-recommends -y \
         linux-firmware \
-        wpasupplicant \
         locales \
         plymouth plymouth-theme-ubuntu-gnome-logo \
         lightdm \
         xdg-user-dirs \
         pulseaudio \
-        gvfs gvfs-fuse gvfs-backends \
-        dosfstools mtools exfatprogs ntfs-3g \
         python3-psutil \
         python3-xdg
     

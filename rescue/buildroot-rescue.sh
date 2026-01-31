@@ -26,10 +26,8 @@ systemd-nspawn -D root --machine=rescue bash -c "
 
     # core
     apt-get install --no-install-recommends -y \
-        wpasupplicant \
         libasound2t64 \
-        libdbus-glib-1-2 \
-        gvfs dosfstools mtools exfatprogs ntfs-3g
+        libdbus-glib-1-2
     
     # ui
     apt-get install --no-install-recommends -y \

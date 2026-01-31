@@ -41,13 +41,16 @@ systemd-nspawn -D root-base --machine=base /bin/bash -c "
         shim-signed \
         casper \
         zstd \
-        bash-completion \
+        gvfs gvfs-fuse gvfs-backends \
+        dosfstools mtools exfatprogs ntfs-3g \
         network-manager \
         systemd-resolved \
         systemd-timesyncd \
         iputils-ping \
+        wpasupplicant \
         console-setup \
         policykit-1 \
+        bash-completion \
         sudo \
         nano
 
