@@ -6,7 +6,9 @@ if [[ "$EUID" -ne 0 ]]; then
 fi
 
 if [[ ! -d ../root-base ]]; then
-    source ../buildroot-base.sh
+    pushd ..
+    source ./buildroot-base.sh
+    popd
 fi
 
 if [[ -d root ]]; then
