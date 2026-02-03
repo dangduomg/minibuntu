@@ -64,7 +64,8 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         gnome-software \
         gnome-software-plugin-flatpak \
         ubuntu-release-upgrader-gtk \
-        language-selector-gnome
+        language-selector-gnome \
+        blueman
 
     # utilities
     apt-get install --no-install-recommends -y \
