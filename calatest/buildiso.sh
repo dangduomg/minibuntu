@@ -35,18 +35,6 @@ EOF
 
 cd image
 
-cat > README.diskdefines <<EOF
-#define DISKNAME  MINIBUNTU
-#define TYPE  binary
-#define TYPEbinary  1
-#define ARCH  amd64
-#define ARCHamd64  1
-#define DISKNUM  1
-#define DISKNUM1  1
-#define TOTALNUM  0
-#define TOTALNUM0  1
-EOF
-
 grub-mkstandalone \
     --format=i386-pc \
     --output=isolinux/core.img \
