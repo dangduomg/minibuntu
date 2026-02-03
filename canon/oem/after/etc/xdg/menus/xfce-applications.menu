@@ -59,6 +59,7 @@
         </Include>
         <Exclude>
             <Or>
+                <Category>Settings</Category>
                 <Filename>xfce4-file-manager.desktop</Filename>
                 <Filename>xfce4-terminal-emulator.desktop</Filename>
                 <Filename>xfce4-appfinder.desktop</Filename>
@@ -150,6 +151,7 @@
         </Include>
         <Exclude>
             <Or>
+                <Category>Settings</Category>
                 <Filename>xfce4-session-logout.desktop</Filename>
             </Or>
         </Exclude>
