@@ -39,6 +39,11 @@ menuentry "Run $image_name" {
    initrd /casper/initrd
 }
 
+menuentry "Run $image_name (safe graphics)" {
+   linux /casper/vmlinuz boot=casper quiet splash nomodeset ---
+   initrd /casper/initrd
+}
+
 menuentry "Check disc for defects" {
    linux /casper/vmlinuz boot=casper integrity-check ---
    initrd /casper/initrd
@@ -62,18 +67,6 @@ fi
 EOF
 
 cd image
-
-cat > README.diskdefines <<EOF
-#define DISKNAME  MINIBUNTU
-#define TYPE  binary
-#define TYPEbinary  1
-#define ARCH  amd64
-#define ARCHamd64  1
-#define DISKNUM  1
-#define DISKNUM1  1
-#define TOTALNUM  0
-#define TOTALNUM0  1
-EOF
 
 cp "$root/usr/lib/shim/shimx64.efi.signed.previous" isolinux/bootx64.efi
 cp "$root/usr/lib/shim/mmx64.efi" isolinux/mmx64.efi
