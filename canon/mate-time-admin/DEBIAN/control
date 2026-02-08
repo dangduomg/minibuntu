@@ -1,0 +1,23 @@
+Package: mate-time-admin
+Version: 1.26.1-1.1build3
+Architecture: amd64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 88.6
+Depends: gsettings-desktop-schemas, libglib2.0-bin, mate-control-center-common (>= 1.26.1-1.1build3), libc6 (>= 2.34), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10.0), libdconf1 (>= 0.14.0), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.2.1), libgdk-pixbuf-2.0-0 (>= 2.22.0), libglib2.0-0t64 (>= 2.79.0), libgtk-3-0t64 (>= 3.21.4), libmate-desktop-2-17t64 (>= 1.25), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libpolkit-gobject-1-0 (>= 0.99), libx11-6, libxcursor1 (>> 1.1.2), libxi6 (>= 2:1.2.0), libxklavier16 (>= 5.0)
+Suggests: gconf2
+Breaks: ubuntu-mate-default-settings (<< 16.04)
+Section: x11
+Priority: optional
+Homepage: http://www.mate-desktop.org/
+Description: utilities to configure the MATE desktop
+ The MATE control center contains configuration applets for the MATE desktop,
+ allowing to set accessibility configuration, desktop fonts, keyboard
+ and mouse properties, sound setup, desktop theme and background, user
+ interface properties, screen resolution, and other MATE parameters.
+ .
+ It also contains a front end to these applets, which can also be
+ accessed with the MATE panel or the Caja file manager.
+ .
+ This is the date and time manager, extracted from mate-control-center,
+ intended for desktop-agnostic use.
+Original-Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
