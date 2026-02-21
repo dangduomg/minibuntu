@@ -53,7 +53,8 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
 
     # theme
     apt-get install -y \
-        orchis-gtk-theme papirus-icon-theme bibata-cursor-theme fonts-ubuntu
+        orchis-gtk-theme papirus-icon-theme bibata-cursor-theme fonts-ubuntu \
+        fonts-noto-core fonts-noto-cjk fonts-noto-color-emoji
 
     # system tools
     apt-get install --no-install-recommends -y \
