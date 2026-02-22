@@ -33,13 +33,12 @@ systemd-nspawn -D root --machine=rescue bash -c "
     
     # ui
     apt-get install --no-install-recommends -y \
-        xorg xfce4 tango-icon-theme policykit-1-gnome \
+        xorg xfce4 lxterminal tango-icon-theme policykit-1-gnome \
         thunar-volman \
         network-manager-gnome \
     
     # utilities
     apt-get install --no-install-recommends -y \
-        lxterminal \
         htop \
         mousepad \
         xarchiver \
