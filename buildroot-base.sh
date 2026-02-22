@@ -5,23 +5,13 @@ if [[ "$EUID" -ne 0 ]]; then
     exit 1
 fi
 
-if [[ ! -f bootstrap.tar.gz ]]; then
-    if [[ -d bootstrap ]]; then
-        rm -r bootstrap
-    fi
-    mkdir bootstrap
-    debootstrap --arch=amd64 --variant=minbase \
-        --make-tarball=bootstrap.tar.gz noble bootstrap
-fi
-
-if [[ -d root-base ]]; then
+if [[ -d bootstrap ]]; then
     rm -r root-base
 fi
 mkdir root-base
 
-debootstrap --unpack-tarball="$(realpath bootstrap.tar.gz)" \
-    noble root-base
-    
+debootstrap --arch=amd64 --variant=minbase noble root-base
+
 rsync -aHAX --numeric-ids --chown=root:root oem-base/before/ root-base/
 
 systemd-nspawn -D root-base --machine=base /bin/bash -c "
