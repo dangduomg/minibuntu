@@ -1,6 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Type=Application
-Exec=/usr/bin/xfce4-panel
-Name=Panel
-Comment=Start the Xfce4 Panel
