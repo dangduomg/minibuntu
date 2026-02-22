@@ -18,12 +18,6 @@ mkdir -p image/{.disk,casper,isolinux,install}
 cp "$root/boot/vmlinuz-6.8.0-31-generic" image/casper/vmlinuz
 cp "$root/boot/initrd.img-6.8.0-31-generic" image/casper/initrd
 
-wget --progress=dot -O image/memtest.zip \
-    https://www.memtest.org/download/v7.20/mt86plus_7.20.binaries.zip
-unzip -p image/memtest.zip memtest64.bin > image/install/memtest86+.bin
-unzip -p image/memtest.zip memtest64.efi > image/install/memtest86+.efi
-rm image/memtest.zip
-
 touch image/ubuntu
 
 
