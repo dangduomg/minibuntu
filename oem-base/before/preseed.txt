@@ -1,0 +1,7 @@
+tzdata tzdata/Zones select Etc
+tzdata tzdata/Zones/Etc select UTC
+
+locales locales/locales_to_be_generated select en_US.UTF-8 UTF-8
+locales locales/default_environment_locale select en_US.UTF-8
+
+console-setup console-setup/codeset47 select Guess optimal character set

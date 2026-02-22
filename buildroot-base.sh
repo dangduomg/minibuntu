@@ -5,7 +5,7 @@ if [[ "$EUID" -ne 0 ]]; then
     exit 1
 fi
 
-if [[ -d bootstrap ]]; then
+if [[ -d root-base ]]; then
     rm -r root-base
 fi
 mkdir root-base
@@ -20,9 +20,9 @@ systemd-nspawn -D root-base --machine=base /bin/bash -c "
 
     apt-get update
 
-    apt-get install --no-install-recommends -y dialog
+    debconf-set-selections /preseed.txt
 
-    apt-get install --no-install-recommends -y \
+    DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
         systemd-sysv \
         linux-image-6.8.0-31-generic \
         linux-modules-extra-6.8.0-31-generic \
@@ -42,12 +42,14 @@ systemd-nspawn -D root-base --machine=base /bin/bash -c "
         policykit-1 \
         bash-completion \
         sudo \
-        nano
+        nano \
+        dialog
 
     apt-get clean
     rm -r /var/lib/apt/lists/*
     
     rm /etc/apt/apt.conf.d/01proxy
+    rm /preseed.txt
 "
 
 rsync -aHAX --numeric-ids --chown=root:root oem-base/after/ root-base/
