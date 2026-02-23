@@ -78,7 +78,8 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         atril \
         engrampa \
         abiword \
-        gnumeric
+        gnumeric \
+        transmission-gtk
 
     # system tools (live only)
     apt-get install --no-install-recommends -y \
