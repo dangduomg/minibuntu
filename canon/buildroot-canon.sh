@@ -28,7 +28,7 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
     
     # core
     apt-get install --no-install-recommends -y \
-        linux-firmware \
+        linux-generic \
         locales \
         plymouth plymouth-themes \
         lightdm \
