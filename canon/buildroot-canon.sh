@@ -65,7 +65,8 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         gnome-software-plugin-flatpak \
         ubuntu-release-upgrader-gtk \
         language-selector-gnome \
-        blueman
+        blueman \
+        thunar-volman
 
     # utilities
     apt-get install --no-install-recommends -y \
@@ -79,7 +80,8 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         engrampa \
         abiword \
         gnumeric \
-        transmission-gtk
+        transmission-gtk \
+        thunar-archive-plugin
 
     # system tools (live only)
     apt-get install --no-install-recommends -y \
