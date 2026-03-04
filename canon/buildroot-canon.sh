@@ -66,7 +66,8 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         ubuntu-release-upgrader-gtk \
         language-selector-gnome \
         blueman \
-        thunar-volman
+        thunar-volman \
+        timeshift
 
     # utilities
     apt-get install --no-install-recommends -y \
