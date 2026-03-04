@@ -101,6 +101,9 @@
     <property name="plugin-16" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
-    <property name="plugin-17" type="string" value="clock"/>
+    <property name="plugin-17" type="string" value="clock">
+      <property name="digital-date-font" type="string" value="Ubuntu Sans 9"/>
+      <property name="digital-time-font" type="string" value="Ubuntu Sans Semi-Bold 10"/>
+    </property>
   </property>
 </channel>
