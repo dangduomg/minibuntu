@@ -47,9 +47,9 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
     
     # ui
     apt-get install --no-install-recommends -y \
-        xorg xfce4 xfce4-notifyd tumbler xfce4-pulseaudio-plugin \
-        xfce4-power-manager-plugins network-manager-gnome \
-        lightdm-gtk-greeter light-locker
+        xorg xfce4 xfce4-notifyd tumbler xfce4-whiskermenu-plugin \
+        xfce4-pulseaudio-plugin xfce4-power-manager-plugins \
+        network-manager-gnome lightdm-gtk-greeter light-locker
 
     # theme
     apt-get install -y \
@@ -81,7 +81,9 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         abiword \
         gnumeric \
         transmission-gtk \
-        thunar-archive-plugin
+        thunar-archive-plugin \
+        menulibre \
+        mugshot
 
     # system tools (live only)
     apt-get install --no-install-recommends -y \
