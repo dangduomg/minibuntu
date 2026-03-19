@@ -57,7 +57,7 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         fonts-noto-core fonts-noto-cjk fonts-noto-color-emoji
 
     # system tools
-    apt-get install --no-install-recommends \
+    apt-get install --no-install-recommends -y \
         network-manager-gnome \
         policykit-1-gnome \
         xfce4-taskmanager \
