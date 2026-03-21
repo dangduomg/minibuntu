@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 if [[ $EUID -ne 0 ]]; then
    echo 'run this script as root'
    exit 1
