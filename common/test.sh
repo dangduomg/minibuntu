@@ -7,11 +7,7 @@ if [[ "$EUID" -ne 0 ]]; then
     exit 1
 fi
 
-if [[ ! -d root ]]; then
-    source ./buildroot.sh
-fi
-
-source ./buildiso-test.sh
+source ./buildiso-test.sh $1
 
 if [[ -f target.qcow2 ]]; then
     rm target.qcow2
