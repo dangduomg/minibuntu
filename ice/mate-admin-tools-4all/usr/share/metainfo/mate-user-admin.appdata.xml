@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>mate-user-admin.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>MATE Manager</name>
+  <name xml:lang="zh_TW">MATE 管理員</name>
+  <name xml:lang="zh_HK">Mate 管理器</name>
+  <name xml:lang="zh_CN">MATE 管理器</name>
+  <name xml:lang="uk">Розпорядник MATE</name>
+  <name xml:lang="tr">MATE Yönetici</name>
+  <name xml:lang="sr">Мејтов управник</name>
+  <name xml:lang="sl">Upravljalnik MATE</name>
+  <name xml:lang="ru">Менеджер MATE</name>
+  <name xml:lang="pl">Menedżer MATE</name>
+  <name xml:lang="oc">Gestionari MATE</name>
+  <name xml:lang="nl">MATE Beheer</name>
+  <name xml:lang="nds">MATE-Verwalter</name>
+  <name xml:lang="nb">MATE Brukerbehandler</name>
+  <name xml:lang="ms">Pengurus MATE</name>
+  <name xml:lang="lt">MATE tvarkytuvė</name>
+  <name xml:lang="ja">MATE マネージャ</name>
+  <name xml:lang="it">MATE Manager</name>
+  <name xml:lang="id">Manajer MATE</name>
+  <name xml:lang="hu">MATE felhasználó kezelő</name>
+  <name xml:lang="gl">Xestor do MATE</name>
+  <name xml:lang="fr">Gestionnaire de MATE</name>
+  <name xml:lang="et">MATE Haldur</name>
+  <name xml:lang="el">Διαχειριστής MATE</name>
+  <name xml:lang="da">MATE-håndtering</name>
+  <name xml:lang="cs">Správce MATE</name>
+  <name xml:lang="ca">Gestor de MATE</name>
+  <name xml:lang="ar">مدير ماتي</name>
+  <summary>Managing Linux Local Users and Groups</summary>
+  <summary xml:lang="zh_TW">管理 Linux 本機使用者與群組</summary>
+  <summary xml:lang="zh_HK">管理 Linux 本地帳號和群組</summary>
+  <summary xml:lang="zh_CN">管理 Linux 本地用户和组</summary>
+  <summary xml:lang="uk">Керування локальними користувачами та групами Linux</summary>
+  <summary xml:lang="tr">Linux Yerel Kullanıcıları ve Grupları Yönetimi</summary>
+  <summary xml:lang="sr">Управљање Линуксовим локалним корисницима и групама</summary>
+  <summary xml:lang="sl">Upravlja Linux lokalne uporabnike in skupine</summary>
+  <summary xml:lang="ru">Управление локальными пользователями и группами Linux</summary>
+  <summary xml:lang="pl">Zarządzanie użytkownikami i grupami lokalnymi systemu Linux</summary>
+  <summary xml:lang="nl">Beheren van lokale gebruikers en groepen in Linux</summary>
+  <summary xml:lang="nds">Stedenwies Linux-Brukers un -Gruppen verwalten</summary>
+  <summary xml:lang="nb">Behandle lokale Linux-brukere og -grupper</summary>
+  <summary xml:lang="ms">Mengurus Pengguna dan Kumpulan Setempat Linux</summary>
+  <summary xml:lang="lt">Linux vietinių naudotojų ir grupių tvarkymas</summary>
+  <summary xml:lang="ja">Linux のローカルユーザーとグループの管理</summary>
+  <summary xml:lang="it">Gestire Utenti Locali e Gruppi in Linux</summary>
+  <summary xml:lang="id">Mengelola Pengguna dan Grup Lokal Linux</summary>
+  <summary xml:lang="hu">Helyi felhasználók és csoportok kezelése</summary>
+  <summary xml:lang="gl">Xestión de usuarios e grupos locais de Linux</summary>
+  <summary xml:lang="fr">Gestion des utilisateurs et groupes locaux Linux</summary>
+  <summary xml:lang="et">Linuxi lokaalsete kasutajate ja gruppide haldamine</summary>
+  <summary xml:lang="el">Διαχείριση τοπικών χρηστών και ομάδων Linux</summary>
+  <summary xml:lang="da">Håndter lokale brugere og grupper for Linux</summary>
+  <summary xml:lang="cs">Správa místních linuxových uživatelských účtů a skupin</summary>
+  <summary xml:lang="ca">Gestió de grups i usuaris locals de Linux</summary>
+  <description>
+    <p>
+   Mate Manager is a graphical application that manages local users and groups. 
+   It can add and delete local users, change user name, user type, user language, 
+   user password, automatic login. You can view the user's login record. 
+   By working with group-service, groups of users can be managed, such as 
+   adding/removing existing groups and creating/deleting new groups.
+ </p>
+    <p xml:lang="zh_TW">Mate 管理員是可以管理本機使用者與群組的圖形化應用程式。它可以新增與刪除本機使用者、變更使用者名稱、使用者類型、使用者語言、使用者密碼、自動登入等。您可以檢視使用者的登入紀錄。使用 group-service，使用者的群組可以被管理，像是新增與移除既有的群組與建立／刪除新群組。</p>
+    <p xml:lang="zh_HK">Mate 管理器是一個用來管理本地帳號和群組的圖形應用程式。它可以添加和刪除本地使用者帳號，更改使用者名稱、使用者種類、使用者語言、使用者密碼和自動登入設定。你可以翻查使用者的登入紀錄。透過 group-service 可以管理使用者的群組，例如添加 / 移除現有群組和添加 / 刪除新群組。</p>
+    <p xml:lang="zh_CN">Mate 管理器是一款图形化应用程序，可用于管理本地用户和组。本程序可以添加和删除本地用户、更改用户名字、用户类型、用户语言、用户密码、设置自动登录。您可以查看用户的登录记录。通过使用组服务（group-service），可以管理用户组，例如添加或删除现有的用户组，以及创建或删除新用户组。</p>
+    <p xml:lang="uk">Розпорядник Mate - це графічний додаток, який керує локальними користувачами та групами. Він може додавати та вилучати локальних користувачів, змінювати ім’я користувача, тип користувача, мову користувача, пароль користувача, самочинний вхід. Ви можете переглянути запис про вхід користувача. Працюючи з груповим сервісом, можна керувати групами користувачів, такими як додавання/вилучення наявних груп та створення/вилучення нових груп.</p>
+    <p xml:lang="tr">Mate Yöneticisi yerel kullanıcıları ve grupları yöneten grafik arayüzlü bir uygulamadır. Yerel kullanıcıları ekleyebilir ve silebilir, kullanıcı adını, kullanıcı türünü, kullanıcı dilini, kullanıcı parolasını, otomatik giriş bilgilerini değiştirebilir. Kullanıcının oturum kaydını görüntüleyebilirsiniz. Grup hizmeti ile çalışarak, mevcut grupları ekleme/kaldırma ve yeni grupları oluşturma/silme gibi işlevlerle kullanıcı gruplarını yönetilebilir.</p>
+    <p xml:lang="sr">Мејтов управник је графички програм који управља локалним корисницима и групама. Може додати и брисати локалне кориснике, променити име, врсту, језик и лозинку корисника, аутоматско пријављивање. Можете видети запис пријављивања корисника. У раду са услугом-групе, групама корисника се може управљати, као што је додавање/уклањање постојећих група и стварање/брисање нових група.</p>
+    <p xml:lang="sl">Mate Manager je grafična aplikacija, ki upravlja krajevne uporabnike in skupine. Lahko dodaja in briše krajevne uporabnike, spreminja uporabniško ime, vrsto uporabnika, uporabniški jezik, uporabniško geslo, samodejno prijavo. Ogledate si lahko zapisnik uporabnikovih prijav. Z delom s storitvami skupine je mogoče upravljati skupine uporabnikov, npr. dodajati/odstranjevati obstoječe skupine in ustvarjati/brisati nove skupine.</p>
+    <p xml:lang="pl">Menedżer MATE to graficzna aplikacja do zarządzania lokalnymi użytkownikami i grupami. Może: dodawać i usuwać lokalnych użytkowników, zmieniać nazwę użytkownika, typ użytkownika, język użytkownika, hasło użytkownika, automatyczne logowanie. Pozwala na wyświetlanie rejestru logowania użytkownika. Pracując z usługą grupową, można zarządzać grupami użytkowników, na przykład dodawać lub usuwać istniejące grupy i tworzyć lub usuwać nowe grupy.</p>
+    <p xml:lang="nl">MATE Beheer is een grafische toepassing die lokale gebruikers en groepen beheert. Hij kan plaatselijke gebruikers toevoegen en verwijderen. Van een gebruiker kan hij de volgende zaken veranderen: naam, type, taal, wachtwoord, automatische aanmelding. U kunt het aanmeldgedrag zien van een gebruiker. Door te werken met group-service, kunnen groepen van gebruikers worden beheerd, zoals het toevoegen en verwijderen van bestaande groepen en het aanmaken/wissen van nieuwe groepen. </p>
+    <p xml:lang="nb">MATE Brukerbehandler er et grafisk program som behandler lokale brukere og grupper. Det kan legge til og fjerne lokale brukere, endre brukernavn, brukertype, brukerspråk, brukerpassord og automatisk innlogging. Det kan vise brukerens innloggingshistorikk. MATE Brukerbehandler kan også legge til og fjerne brukere fra eksisterende grupper, og legge til og slette grupper.</p>
+    <p xml:lang="ms">Pengurus Mate ialah aplikasi bergrafik yang dapat mengurus pengguna setempat dan kumpulan. Ia boleh menambah dan memadam pengguna setempat, ubah nama pengguna, jenis pengguna, bahasa pengguna, kata laluan pengguna, dan daftar masuk automatik. Anda boleh melihat rekod daftar masuk pengguna. Dengan mengendalikan group-service, kumpulan pengguna boleh diuruskan, seperti menambah/membuang kumpulan sedia ada dan mencipta/memadam kumpulan baharu.</p>
+    <p xml:lang="ja">Mate マネージャは、ローカルユーザーとグループを管理するグラフィカルなアプリケーションです。ローカルユーザーの追加と削除、ユーザー名の変更、ユーザーのタイプ変更、ユーザーの言語変更、ユーザーのパスワード変更、自動ログインなどの設定が可能です。ユーザーのログイン記録を見ることができます。グループサービスと連携することで、既存のグループの追加・削除や、新しいグループの作成・削除など、ユーザーのグループを管理することができます。</p>
+    <p xml:lang="it">Mate Manager è una applicazione grafica che gestisce gruppi e utenti locali.  Può aggiungere o cancellare utenti locali, cambiare il nome utente, tipo di utente, lingua utente, password utente, login automatico. È possibile visualizzare il rapporto di login utente. Lavorando con servizi di gruppo, possono essere gestiti gruppi di utenti, come ad esempio aggiungere/rimuovere gruppi esistenti e creare/cancellare nuovi gruppi.</p>
+    <p xml:lang="id">Manajer Mate adalah aplikasi grafis yang mengelola pengguna dan grup lokal. Ini bisa menambah dan menghapus pengguna lokal, mengubah nama pengguna, jenis pengguna, bahasa pengguna, kata sandi pengguna, login otomatis. Anda dapat melihat rekaman masuk pengguna. Dengan bekerja dengan group-service, kelompok pengguna dapat dikelola, seperti menambah/menghapus grup yang ada dan membuat/menghapus grup baru.</p>
+    <p xml:lang="gl">O xestor do Mate é unha aplicación gráfica que xestiona usuarios e grupos locais. Pode engadir e eliminar usuarios locais, cambiar o nome do usuario, tipo de usuario, idioma do usuario, contrasinal do usuario, inicio de sesión automático. Pode ver o rexistro de inicio de sesión do usuario. Traballando con servizo de grupo, pódense xestionar grupos de usuarios, como engadir/eliminar grupos existentes e crear/eliminar novos grupos.</p>
+    <p xml:lang="fr">Mate Manager est une application graphique permettant de gérer les utilisateurs et groupes locaux. Elle permet d'ajouter et supprimer des utilisateurs locaux, changer leur nom, type, langue, mot de passe et paramétrer leur connexion automatique. Vous pouvez voir les enregistrements de connexion des utilisateurs. Avec l'aide de group-service, les groupes d'utilisateurs peuvent être gérés, avec l'ajout et la suppression de groupes.</p>
+    <p xml:lang="el">Ο Διαχεισιτής Mate είναι μια γραφική εφαρμογή που διαχειρίζεται τοπικούς χρήστες και ομάδες. Μπορεί να προσθέσει και να διαγράψει τοπικούς χρήστες, να αλλάξει όνομα χρήστη, τύπο χρήστη, γλώσσα χρήστη, συνθηματικό χρήστη, αυτόματη σύνδεση. Μπορείτε να δείτε το ιστορικό σύνδεσης του χρήστη. Δουλεύοντας με ομάδα-υπηρεσίες, μπορείτε να διαχειριστείτε ομάδες χρηστών, όπως προσθήκη/αφαίρεση υφιστάμενων ομάδων και δημιουργία/διαγραφή νέων ομάδων.</p>
+    <p xml:lang="da">MATE-håndteringen er et grafisk program, der håndterer lokale brugere og grupper. Den kan tilføje og slette lokale brugere, ændre brugernavn, brugertype, brugersprog, adgangskoden for brugeren, automatisk logind. Du kan se brugerens logindstatistik. Ved at arbejde med group-service, kan grupper af brugere håndteres, såsom tilføjelse/fjernelse fra eksisterende grupper og oprettelse/sletning af nye grupper.</p>
+    <p xml:lang="cs">Správce MATE je grafický nástroj pro správu místních uživatelských účtů a skupin. Umožňuje přidávat a odstraňovat místní uživatele, měnit uživatelská jména, typy účtů, jazyk uživatele, jeho heslo a spravovat automatické přihlášení. Umožňuje také prohlížet podrobnosti účtů. Ve spolupráci s „group-service” umožňuje správu uživatelských skupin jako přidávání a odstraňování existujících skupin a vytváření či mazáni nových skupin.</p>
+    <p xml:lang="ca">El gestor de Mate és una aplicació gràfica que gestiona els usuaris i grups locals. Aquesta aplicació pot afegir i eliminar usuaris locals, canviar el nom d’usuari, el tipus d’usuari, l’idioma de l’usuari, la contrasenya de l’usuari, l’inici de sessió automàtic. Podeu veure el registre d’inicis de sessions dels usuaris. En treballar amb el servei de grups, es poden gestionar grups d’usuaris, com ara afegir o eliminar grups existents i crear o suprimir nous grups.</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <image width="600" height="540">
+    https://github.com/zhuyaliang/images/blob/master/user-admin-001.png
+   </image>
+    </screenshot>
+    <screenshot>
+      <image width="900" height="540">
+    https://github.com/zhuyaliang/images/blob/master/user-admin-001.png
+   </image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://github.com/zhuyaliang/</url>
+  <updatecontact>https://github.com/zhuyaliang/</updatecontact>
+  <project_group>MATE</project_group>
+</component>
