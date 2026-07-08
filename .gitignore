@@ -19,7 +19,7 @@ calatest/calamares-settings/
 
 # automatically built debs
 **/oem/after/pkgs/calamares-settings-*.deb
-**/oem/after/pkgs/mate-time-admin.deb
+**/oem/after/pkgs/mate-admin-tools-4all.deb
 
 # linux-firmware-*.deb (large heavy debs)
 **/linux-firmware-*.deb

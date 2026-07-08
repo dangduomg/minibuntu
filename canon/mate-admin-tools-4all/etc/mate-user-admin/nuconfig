@@ -1,0 +1,14 @@
+# /etc/mate-user-admin/nuconfig 
+# Default configuration for new users 
+[nudefault]
+#Default language for new users
+nulanguage = en_US.utf8
+
+#Default Type for New User, 0 Ordinary User 1 Manage User
+nutype = 0                 
+
+#Default Add Groups for New Users (Administrtors)
+nuadmingroups =mail;video;lightdm
+
+#Default Add Groups for New Users (Standard)
+nustandgroups =mail;video;cdrom;sshd
