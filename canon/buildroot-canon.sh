@@ -107,7 +107,7 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         calamares
 "
 
-systemd-nspawn -b -D root --machine=minibuntu-canon > /dev/null &
+systemd-nspawn -b -D root --machine=minibuntu-canon --bind=/etc/resolv.conf:/etc/resolv.conf > /dev/null &
 
 until machinectl show minibuntu-canon | grep -q "State=running"; do
     sleep 1
