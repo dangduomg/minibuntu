@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source ../common/buildiso.sh minibuntu-canon $1
+source ../common/buildiso.sh minibuntu-ice $1
