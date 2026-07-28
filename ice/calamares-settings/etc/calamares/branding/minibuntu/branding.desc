@@ -5,12 +5,12 @@ windowExpanding:    normal
 windowSize:         800x600
 
 strings:
-    productName:         minibuntu-canon
-    shortProductName:    minibuntu-canon
+    productName:         minibuntu-ice
+    shortProductName:    minibuntu-ice
     version:             24.04 LTS
     shortVersion:        noble
-    versionedName:       minibuntu-canon
-    shortVersionedName:  minibuntu-canon 24.04 LTS
+    versionedName:       minibuntu-ice
+    shortVersionedName:  minibuntu-ice 24.04 LTS
     bootloaderEntryName: Ubuntu
 
 images:
