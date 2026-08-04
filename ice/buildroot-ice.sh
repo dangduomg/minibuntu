@@ -36,7 +36,8 @@ systemd-nspawn -D root --machine=minibuntu-ice --as-pid2 bash -c "
         lightdm \
         pulseaudio \
         python3-psutil \
-        policykit-desktop-privileges
+        policykit-desktop-privileges \
+        software-properties-common
 
     # ui
     apt-get install --no-install-recommends -y \
