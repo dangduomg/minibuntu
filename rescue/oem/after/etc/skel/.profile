@@ -28,8 +28,3 @@ fi
 
 # set browser
 export BROWSER=/usr/bin/palemoon
-
-# start X at login
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-    exec startx
-fi
