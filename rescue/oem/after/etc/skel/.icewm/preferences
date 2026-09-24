@@ -68,7 +68,7 @@ CPUStatusClassHint="htop.XTerm"
 # CPUStatusCombine=1 # 0/1
 
 #  Command to run on CPU status.
-CPUStatusCommand="htop"
+CPUStatusCommand="x-terminal-emulator -e htop"
 
 #  Show ACPI temperature in CPU status tool tip.
 # CPUStatusShowAcpiTemp=1 # 0/1

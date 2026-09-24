@@ -41,7 +41,7 @@ systemd-nspawn -D root --machine=minibuntu-rescue --as-pid2 bash -c "
 
     # system tools
     apt-get install --no-install-recommends -y \
-        pcmanfm \
+        xfe \
         network-manager-gnome \
         policykit-1-gnome
     
@@ -61,10 +61,8 @@ systemd-nspawn -D root --machine=minibuntu-rescue --as-pid2 bash -c "
     # utilities
     apt-get install --no-install-recommends -y \
         htop \
-        mousepad \
         xarchiver \
         ghex \
-        viewnior \
         xpdf \
         galculator \
         abiword

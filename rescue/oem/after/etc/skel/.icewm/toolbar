@@ -1,4 +1,4 @@
 prog Terminal terminal x-terminal-emulator
-prog "File Manager" folder pcmanfm
+prog "File Manager" folder xfe
 prog Browser applications-internet x-www-browser
 prog "Application Finder" org.xfce.appfinder xfce4-appfinder
