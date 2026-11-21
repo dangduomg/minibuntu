@@ -10,7 +10,8 @@ set -euo pipefail
 variant=$1
 
 project_root=$(dirname "$(realpath "$0")")
-src_dir=$project_root/src
+src_root=$project_root/src
+src_dir=$src_root/$variant
 build_dir=$project_root/build/$variant
 image_dir=$build_dir/image
 os_root=$build_dir/root
@@ -26,7 +27,7 @@ cp "$os_root/boot/initrd.img-6.8.0-31-generic" "$image_dir/casper/initrd"
 touch "$image_dir/ubuntu"
 
 
-python3 "$src_dir/generate-grub.py" "$variant" > "$image_dir/isolinux/grub.cfg"
+python3 "$src_root/generate-grub.py" "$variant" > "$image_dir/isolinux/grub.cfg"
 
 pushd "$image_dir"
 
@@ -78,7 +79,7 @@ printf "$(du -sx --block-size=1 "$os_root" | cut -f1)" \
 
 pushd "$image_dir"
 
-mkdir -p "$build_dir/isos"
+mkdir -p "$build_dir/iso"
 
 xorriso \
    -as mkisofs \
@@ -86,7 +87,7 @@ xorriso \
    -full-iso9660-filenames \
    -J -J -joliet-long \
    -volid UBNETINST \
-   -output "$build_dir/isos/$iso_name" \
+   -output "$build_dir/iso/$iso_name" \
    -eltorito-boot isolinux/bios.img \
      -no-emul-boot \
      -boot-load-size 4 \

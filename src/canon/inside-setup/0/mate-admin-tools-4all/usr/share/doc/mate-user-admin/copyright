@@ -1,0 +1,128 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: (mate-)user-admin
+Upstream-Contact: https://github.com/zhuyaliang/
+Source: https://github.com/zhuyaliang/user-admin/
+
+Files: src/main.c
+ src/user-admin.c
+ src/user-admin.h
+ src/user-avatar.c
+ src/user-avatar.h
+ src/user-base.c
+ src/user-base.h
+ src/user-crop.c
+ src/user-crop.h
+ src/user-face.c
+ src/user-face.h
+ src/user-group-window.c
+ src/user-group-window.h
+ src/user-group.c
+ src/user-group.h
+ src/user-history.c
+ src/user-history.h
+ src/user-info.c
+ src/user-info.h
+ src/user-language.c
+ src/user-language.h
+ src/user-list.c
+ src/user-list.h
+ src/user-password.c
+ src/user-password.h
+ src/user-share.c
+ src/user-share.h
+ src/user-window.c
+ src/user-window.h
+Copyright: 2018, zhuyaliang (https://github.com/zhuyaliang/)
+  2020, zhuyaliang (https://github.com/zhuyaliang/)
+  2021, zhuyaliang (https://github.com/zhuyaliang/)
+License: GPL-3+
+
+Files: .tx/config
+ README.md
+ data/face/Default.png
+ data/face/meson.build
+ data/face/bicycle.jpg
+ data/face/calculator.jpg
+ data/face/cat.jpg
+ data/face/coffee2.jpg
+ data/face/flower2.jpg
+ data/face/gamepad.jpg
+ data/face/guitar2.jpg
+ data/face/headphones.jpg
+ data/face/hummingbird.jpg
+ data/face/ic.jpg
+ data/face/mountain.jpg
+ data/face/plane.jpg
+ data/face/surfer.jpg
+ data/face/tomatoes.jpg
+ data/face/tree.jpg
+ data/hicolor/meson.build
+ data/hicolor/16x16/apps/user-admin.png
+ data/hicolor/22x22/apps/user-admin.png
+ data/hicolor/24x24/apps/user-admin.png
+ data/hicolor/32x32/apps/user-admin.png
+ data/hicolor/48x48/apps/user-admin.png
+ data/icon/user-admin.png
+ data/icon/meson.build
+ data/mate-user-admin.desktop.in
+ data/mate-user-admin/meson.build
+ data/mate-user-admin/nuconfig
+ data/meson.build
+ data/org.mate.user.admin.policy.in
+ meson.build
+ meson_post_install.sh
+ po/LINGUAS
+ po/POTFILES.in
+ po/meson.build
+ src/meson.build
+Copyright: 2018-2021, zhuyaliang (https://github.com/zhuyaliang/)
+License: GPL-3+
+Comment:
+ Assuming copyright holder from other code files.
+ .
+ Assuming license from COPYING file (and also from other codefiles).
+
+Files: data/mate-user-admin.appdata.xml.in
+Copyright: 2018-2021, zhuyaliang (https://github.com/zhuyaliang/)
+License:  CC0-1.0
+Comment:
+ Assuming copyright holder from other code files.
+
+Files: po/*.po
+ po/mate-user-admin.pot
+Copyright: YEAR, THE PACKAGE'S COPYRIGHT HOLDER
+License: GPL-3+
+Comment:
+ Assuming GPL-3+ as license here (see COPYING file).
+
+Files: debian/*
+Copyright: 2022, N0rbert <nrbrtx@gmail.com>
+           2022-2023, Mike Gabriel <sunweaver@debian.org>
+License: GPL-3+
+
+License: GPL-3+
+ This program is free software; you can redistribute it and/or modify it under
+ the terms of the GNU General Public License as published by the Free Software
+ Foundation, either version 3 of the License, or (at your option) any later
+ version.
+ .
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY
+ WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+ PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along with
+ this program.  If not, see .
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-3'.
+
+License: CC0-1.0
+ To the extent possible under law, the author(s) have dedicated all copyright
+ and related and neighboring rights to this software to the public domain
+ worldwide. This software is distributed without any warranty.
+ .
+ You should have received a copy of the CC0 Public Domain Dedication along with
+ this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
+ .
+ On Debian systems, the full text of the CC0 1.0 Universal license can be found
+ in the file `/usr/share/common-licenses/CC0-1.0'.

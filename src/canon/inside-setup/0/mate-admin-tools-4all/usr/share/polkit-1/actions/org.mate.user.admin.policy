@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE policyconfig PUBLIC "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN" "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
+<policyconfig>
+  <vendor>Mate User Admin Project</vendor>
+  <vendor_url>https://github.com/zhuyaliang</vendor_url>
+  <action id="org.mate.user.admin.administration">
+    <description>Manage user accounts</description>
+    <description xml:lang="zh_TW">管理使用者帳號</description>
+    <description xml:lang="zh_HK">管理使用者帳號</description>
+    <description xml:lang="zh_CN">管理用户账户</description>
+    <description xml:lang="uk">Керування обліківками користувачів</description>
+    <description xml:lang="tr">Kullanıcı hesaplarını yönet</description>
+    <description xml:lang="sv">Hantera användarkonton</description>
+    <description xml:lang="sr">Управљајте корисничким налозима</description>
+    <description xml:lang="sl">Upravljate uporabniške račune</description>
+    <description xml:lang="ru">Управление учётными записями пользователей</description>
+    <description xml:lang="pt">Gerir contas de utilizadores</description>
+    <description xml:lang="pt_BR">Gerenciar contas de usuários</description>
+    <description xml:lang="pl">Zarządzaj kontami użytkownika</description>
+    <description xml:lang="oc">Gerir los comptes d’utilizaire</description>
+    <description xml:lang="nl">Gebruikersaccounts beheren</description>
+    <description xml:lang="nds">Brukerkonten verwalten</description>
+    <description xml:lang="nb">Administrer brukerkontoer</description>
+    <description xml:lang="ms">Urus akaun pengguna</description>
+    <description xml:lang="lt">Tvarkyti naudotojų paskyras</description>
+    <description xml:lang="ko">사용자 계정 관리</description>
+    <description xml:lang="ja">ユーザーアカウントの管理</description>
+    <description xml:lang="it">Gestisce gli account utenti</description>
+    <description xml:lang="id">Mengelola akun pengguna</description>
+    <description xml:lang="hu">Felhasználói fiókok kezelése</description>
+    <description xml:lang="gl">Administrar contas de usuario</description>
+    <description xml:lang="fr">Gérer les comptes utilisateurs</description>
+    <description xml:lang="fi">Hallitse käyttäjätunnuksia</description>
+    <description xml:lang="et">Kasutajakontode haldamine</description>
+    <description xml:lang="el">Διαχείριση λογαριασμών των χρηστών</description>
+    <description xml:lang="de">Benutzerkonten verwalten</description>
+    <description xml:lang="da">Håndter brugerkonti</description>
+    <description xml:lang="cs">Správa uživatelských účtů</description>
+    <description xml:lang="ca">Gestiona els comptes d’usuari</description>
+    <description xml:lang="ar">إدارة حسابات المستخدم</description>
+    <message>Authentication is required to change user data</message>
+    <message xml:lang="zh_TW">變更使用者資料時需要驗證</message>
+    <message xml:lang="zh_HK">需通過認證以更改使用者資料</message>
+    <message xml:lang="zh_CN">更改用户数据需要身份验证</message>
+    <message xml:lang="uk">Для зміни даних користувача потрібна автентифікація</message>
+    <message xml:lang="tr">Kullanıcı verilerini değiştirmek için kimlik doğrulaması gerekiyor</message>
+    <message xml:lang="sr">Потребно је потврђивање идентитета за промену корисничких података</message>
+    <message xml:lang="sl">Zahtevana je overitev za spremembo uporabniških podatkov</message>
+    <message xml:lang="ru">Для изменения данных пользователя необходима аутентификация</message>
+    <message xml:lang="pt">A autenticação é necessária para alterar os dados do utilizador</message>
+    <message xml:lang="pt_BR">Autenticação necessária para alterar dados do usuário</message>
+    <message xml:lang="pl">Wymagane jest uwierzytelnienie, aby dokonać zmiany danych użytkownika</message>
+    <message xml:lang="oc">Autentificacion requerida per modificar las donadas d’utilizaire</message>
+    <message xml:lang="nl">Authenticatie is vereist voor het wijzigen van gebruikersgegevens</message>
+    <message xml:lang="nds">Authentifikatioon is nödig, um Bruker-Daten to ännern</message>
+    <message xml:lang="nb">Identitetsbekreftelse trengs for å endre brukerdata</message>
+    <message xml:lang="ms">Pengesahihan diperlukan untuk mengubah data pengguna</message>
+    <message xml:lang="lt">Reikia patvirtinti tapatybę, norint keisti naudotojų duomenis</message>
+    <message xml:lang="ko">사용자 데이터를 바꾸시려면 승인이 필요합니다</message>
+    <message xml:lang="ja">ユーザーデータの変更には認証が必要です</message>
+    <message xml:lang="it">È richiesta l'autenticazione per modificare i dati dell'utente</message>
+    <message xml:lang="id">Autentikasi diperlukan untuk mengubah data pengguna</message>
+    <message xml:lang="hu">Hitelesítés szükséges a felhasználó adatainak módosításához</message>
+    <message xml:lang="gl">Requírese autenticación para cambiar os datos do usuario</message>
+    <message xml:lang="fr">Authentification nécessaire pour modifier les données de l'utilisateur</message>
+    <message xml:lang="et">Kasutajaandmete muutmiseks on vaja autentida</message>
+    <message xml:lang="el">Απαιτείται πιστοποίηση για την αλλαγή δεδομένων του χρήστη</message>
+    <message xml:lang="de">Zum Ändern von Benutzerdaten ist eine Authentifizierung erforderlich</message>
+    <message xml:lang="da">Der kræves godkendelse for at ændre brugerdata</message>
+    <message xml:lang="cs">Ke změně uživatelských dat je požadováno ověření</message>
+    <message xml:lang="ca">Cal autentificació per canviar les dades dels usuaris</message>
+    <defaults>
+      <allow_any>no</allow_any>
+      <allow_inactive>no</allow_inactive>
+      <allow_active>auth_admin_keep</allow_active>
+    </defaults>
+    <annotate key="org.freedesktop.policykit.imply">org.freedesktop.accounts.user-administration org.group.admin.group-administration org.freedesktop.realmd.configure-realm org.freedesktop.realmd.login-policy org.freedesktop.accounts.change-own-password</annotate>
+  </action>
+</policyconfig>

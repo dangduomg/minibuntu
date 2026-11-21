@@ -11,5 +11,5 @@ variant=$1
 
 project_root=$(dirname "$(realpath "$0")")
 
-"$project_root/build.sh" "$variant"
+"$project_root/buildroot.sh" "$variant"
 "$project_root/run.sh" "$variant"

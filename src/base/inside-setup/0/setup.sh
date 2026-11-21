@@ -1,8 +1,4 @@
-this_setup_root=$(dirname "$(realpath "$0")")
-
 debconf-set-selections "$this_setup_root/preseed.txt"
-
-cp -ar "$this_setup_root/before"/* /
 
 export DEBIAN_FRONTEND=noninteractive
 

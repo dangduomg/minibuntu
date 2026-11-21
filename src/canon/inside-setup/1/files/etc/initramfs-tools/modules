@@ -1,0 +1,16 @@
+# List of modules that you want to include in your initramfs.
+# They will be loaded at boot time in the order below.
+#
+# Syntax:  module_name [args ...]
+#
+# You must run update-initramfs(8) to effect this change.
+#
+# Examples:
+#
+# raid1
+# sd_mod
+
+# plymouth boot hang fix; it seems to be caused when drivers are loaded too late
+i915
+amdgpu
+nouveau
