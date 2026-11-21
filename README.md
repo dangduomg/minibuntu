@@ -62,13 +62,16 @@ This is optional but is used for testing:
 
 # Screenshots
 
-minibuntu(-canon) on QEMU:
+minibuntu-canon on container:
+![](./screenshots/canon-newer.png)
+
+earlier minibuntu-canon on QEMU:
 ![](./screenshots/canon-new.png)
 
-minibuntu's installer:
+minibuntu-canon's installer:
 ![](./screenshots/installer.png)
 
-minibuntu on QEMU (early version):
+minibuntu-canon on QEMU (earlier version):
 ![](./screenshots/canon.png)
 
 minibuntu-rescue on QEMU running htop (very light!):
