@@ -1,25 +1,3 @@
-# these are my private folders
-archived/
-work/
+build/
 
-# no built roots
-root-base/
-**/root/
-
-# no large binary images
-*.iso
-*.img
-*.qcow2
-
-# no locks
-*.lck
-
-# the calamares settings in calatest is temporary; its for testing only
-calatest/calamares-settings/
-
-# automatically built debs
-**/oem/after/pkgs/calamares-settings-*.deb
-**/oem/after/pkgs/mate-admin-tools-4all.deb
-
-# linux-firmware-*.deb (large heavy debs)
-**/linux-firmware-*.deb
+test/
