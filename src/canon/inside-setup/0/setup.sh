@@ -86,8 +86,6 @@ apt-get install --no-install-recommends -y \
     calamares
 
 # boot-repair (live only)
-sudo add-apt-repository -y ppa:yannubuntu/boot-repair
-apt-get update
 apt-get install --no-install-recommends -y libnotify-dev boot-repair
 
 # mate-admin-tools-4all
