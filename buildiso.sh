@@ -19,8 +19,8 @@ os_root=$build_dir/root
 
 iso_name="minibuntu-$variant-$(date +%Y.%m.%d.%H.%M.%S).iso"
 
-
-mkdir -p "$image_dir"/{.disk,casper,isolinux,install}
+mkdir -p "$image_dir"/{casper,isolinux}
+cp -r "$os_root/image"/* "$os_root/image"/.* "$image_dir"
 
 rsync -L "$os_root/boot/vmlinuz" "$image_dir/casper/vmlinuz"
 rsync -L "$os_root/boot/initrd.img" "$image_dir/casper/initrd"
