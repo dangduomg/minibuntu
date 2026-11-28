@@ -1,7 +1,5 @@
 phase_root=$(dirname "$(realpath "$0")")
 
-cp /proxy /etc/apt/apt.conf.d/01proxy
-
 export DEBIAN_FRONTEND=noninteractive
 
 # certificates for external repo download
