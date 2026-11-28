@@ -15,5 +15,7 @@ apt-get install --no-install-recommends -y \
     unzip \
     rsync \
     squashfs-tools \
+    dosfstools \
+    mtools \
     xorriso \
     apt-cacher-ng
