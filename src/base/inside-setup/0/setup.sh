@@ -1,3 +1,5 @@
+this_setup_root=$(dirname "$(realpath "$0")")
+
 debconf-set-selections "$this_setup_root/preseed.txt"
 
 export DEBIAN_FRONTEND=noninteractive
@@ -25,4 +27,6 @@ apt-get install --no-install-recommends -y \
     bash-completion \
     sudo \
     nano \
-    dialog
+    dialog \
+    ca-certificates \
+    locales
