@@ -16,6 +16,13 @@ apt-get install --no-install-recommends -y \
     python3-psutil \
     policykit-desktop-privileges
 
+# remove old kernel version
+apt-get autoremove --purge -y \
+    linux-image-6.8.0-31-generic
+apt-get autoremove --purge -y \
+    linux-modules-extra-6.8.0-31-generic
+apt-get autoremove --purge -y
+
 # flatpak
 # no packages are installed by default for lightness
 apt-get install --no-install-recommends -y \
@@ -30,7 +37,7 @@ apt-get install --no-install-recommends -y \
     lightdm-gtk-greeter light-locker
 
 # theme
-apt-get install -y \
+apt-get install --no-install-recommends -y \
     orchis-gtk-theme papirus-icon-theme bibata-cursor-theme fonts-ubuntu \
     fonts-noto-core fonts-noto-cjk fonts-noto-color-emoji
 
