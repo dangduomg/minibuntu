@@ -10,4 +10,9 @@ done
 
 machinectl shell "$machine_name" /bin/bash /inside-setup/setup.sh
 
+machinectl poweroff "$machine_name"
+while machinectl list | grep -q  "$machine_name"; do
+    sleep 1
+done
+
 rm -r "$os_root/inside-setup"
