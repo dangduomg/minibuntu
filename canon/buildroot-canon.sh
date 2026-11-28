@@ -38,7 +38,8 @@ systemd-nspawn -D root --machine=minibuntu-canon --as-pid2 bash -c "
         xdg-user-dirs-gtk \
         pulseaudio \
         python3-psutil \
-        policykit-desktop-privileges
+        policykit-desktop-privileges \
+        software-properties-common
 
     # flatpak
     # no packages is installed by default for lightness
