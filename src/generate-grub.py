@@ -11,7 +11,7 @@ set default="0"
 set timeout=30
 
 menuentry "Run minibuntu-{variant}" {{
-    linux /casper/vmlinuz boot=casper verbose ---
+    linux /casper/vmlinuz boot=casper verbose splash ---
     initrd /casper/initrd
 }}
 
