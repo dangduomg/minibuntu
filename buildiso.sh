@@ -12,7 +12,8 @@ variant=$1
 project_root=$(dirname "$(realpath "$0")")
 src_root=$project_root/src
 src_dir=$src_root/$variant
-build_dir=$project_root/build/$variant
+build_root=$project_root/build
+build_dir=$build_root/$variant
 image_dir=$build_dir/image
 os_root=$build_dir/root
 
@@ -79,7 +80,7 @@ printf "$(du -sx --block-size=1 "$os_root" | cut -f1)" \
 
 pushd "$image_dir"
 
-mkdir -p "$build_dir/iso"
+mkdir -p "$build_root/iso"
 
 xorriso \
    -as mkisofs \
@@ -87,7 +88,7 @@ xorriso \
    -full-iso9660-filenames \
    -J -J -joliet-long \
    -volid UBNETINST \
-   -output "$build_dir/iso/$iso_name" \
+   -output "$build_root/iso/$iso_name" \
    -eltorito-boot isolinux/bios.img \
      -no-emul-boot \
      -boot-load-size 4 \
