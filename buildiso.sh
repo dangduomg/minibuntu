@@ -22,8 +22,8 @@ iso_name="minibuntu-$variant-$(date +%Y.%m.%d.%H.%M.%S).iso"
 
 mkdir -p "$image_dir"/{.disk,casper,isolinux,install}
 
-cp "$os_root/boot/vmlinuz-6.8.0-31-generic" "$image_dir/casper/vmlinuz"
-cp "$os_root/boot/initrd.img-6.8.0-31-generic" "$image_dir/casper/initrd"
+rsync -L "$os_root/boot/vmlinuz" "$image_dir/casper/vmlinuz"
+rsync -L "$os_root/boot/initrd.img" "$image_dir/casper/initrd"
 
 touch "$image_dir/ubuntu"
 
